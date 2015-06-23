@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 兰天</title>
-    <link>http://localhost:1313/post/</link>
+    <link>http://cosyman.github.io/post/</link>
     <description>Recent content in Posts on 兰天</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Jun 2015 19:16:57 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cosyman.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>我的2013，豁然开朗</title>
-      <link>http://localhost:1313/blog/2015/06/22/%E6%88%91%E7%9A%842013%E8%B1%81%E7%84%B6%E5%BC%80%E6%9C%97/</link>
+      <link>http://cosyman.github.io/blog/2015/06/22/%E6%88%91%E7%9A%842013%E8%B1%81%E7%84%B6%E5%BC%80%E6%9C%97/</link>
       <pubDate>Mon, 22 Jun 2015 19:16:57 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/2015/06/22/%E6%88%91%E7%9A%842013%E8%B1%81%E7%84%B6%E5%BC%80%E6%9C%97/</guid>
+      <guid>http://cosyman.github.io/blog/2015/06/22/%E6%88%91%E7%9A%842013%E8%B1%81%E7%84%B6%E5%BC%80%E6%9C%97/</guid>
       <description>
 
 &lt;p&gt;相比10年做了传销后从身心财俱损中恢复，技术梦想的找回；11年外派淘宝自我归属的确立之艰辛；12年加入创业公司全身心牺牲后的失落；13年赢来了技术人生的首次豁然开朗。&lt;/p&gt;
@@ -52,10 +52,10 @@
     
     <item>
       <title>我的2014，相对奢侈的生活</title>
-      <link>http://localhost:1313/blog/2015/06/22/%E6%88%91%E7%9A%842014%E7%9B%B8%E5%AF%B9%E5%A5%A2%E4%BE%88%E7%9A%84%E7%94%9F%E6%B4%BB/</link>
+      <link>http://cosyman.github.io/blog/2015/06/22/%E6%88%91%E7%9A%842014%E7%9B%B8%E5%AF%B9%E5%A5%A2%E4%BE%88%E7%9A%84%E7%94%9F%E6%B4%BB/</link>
       <pubDate>Mon, 22 Jun 2015 19:16:57 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/2015/06/22/%E6%88%91%E7%9A%842014%E7%9B%B8%E5%AF%B9%E5%A5%A2%E4%BE%88%E7%9A%84%E7%94%9F%E6%B4%BB/</guid>
+      <guid>http://cosyman.github.io/blog/2015/06/22/%E6%88%91%E7%9A%842014%E7%9B%B8%E5%AF%B9%E5%A5%A2%E4%BE%88%E7%9A%84%E7%94%9F%E6%B4%BB/</guid>
       <description>
 
 &lt;p&gt;前往上海，离开医惠这个艰苦也收获颇多的公司，再一次告别和老婆分离一年的双城生活，过简单而珍贵的日子。选择在携程休整，总算是更专注于技术，任性地学习，显然是一种奢侈。&lt;/p&gt;
