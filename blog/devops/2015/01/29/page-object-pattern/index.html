@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Page Object Pattern &middot; 兰天</title>
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde-x.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight/idea.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:1313/apple-touch-icon-144-precomposed.png">
+  <link href="http://localhost:1313/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Your default page description">
+  <meta name="keywords" content="cosyman,bluesky,兰天">
+  <link rel="author" href="http://plus.google.com/remotejavasky">
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+     
+     <h1>兰天</h1>
+      <p class="lead">优雅的活着</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://localhost:1313/">home</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://localhost:1313/devops/">devops</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://localhost:1313/java/">java</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://localhost:1313/life/">life</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="http://github.com/cosyman"><i class="fa fa-github-square fa-2x"></i></a>
+      
+      <a href="https://www.linkedin.com/in/blueskyyao"><i class="fa fa-linkedin-square fa-2x"></i></a>
+      
+      
+      <a href="https://twitter.com/bluesky_yao"><i class="fa fa-twitter-square fa-2x"></i></a>
+      </li>
+    </ul>
+
+    <p>Copyright &copy; 2015 <a href="http://localhost:1313/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Page Object Pattern</h1>
+    
+
+<p>移动UI自动化，看起来美好，践行起来却难。做个目光短见的务实主义者。Page Objects Pattern是Selenium官方推崇的方式，最近研究写测试用例最佳实践之Page Objects，同时结合Appium的Java Client简单介绍下如何写出靠谱的Page Object。</p>
+
+<h2 id="page-objects:7dbf58256fe9adba2caee2327d472e2f">Page Objects</h2>
+
+<p>Page Object定义为抽象web app页面的一系列对象，通过对页面功能的封装，它得到了很多好处：</p>
+
+<ul>
+<li>减少重复代码</li>
+<li>提高测试代码的可读性和稳定性</li>
+<li>测试代码易于维护</li>
+</ul>
+
+<h2 id="一个简单的例子:7dbf58256fe9adba2caee2327d472e2f">一个简单的例子</h2>
+
+<pre><code class="language-java">public class BaiduSearchPage {
+
+	protected WebDriver driver;
+        @FindBy(id=&quot;kw&quot;)
+	private WebElement kw;
+	private WebElement su;
+
+	public BaiduSearchPage(WebDriver driver) {
+		super();
+		this.driver = driver;
+                PageFactory.initElements(driver, this);
+	}
+
+	public void load(String url) {
+		driver.get(url);
+	}
+
+	public ResultPage search(String key) {
+		kw.clear();
+		kw.sendKeys(key);
+		su.click();
+		return new ResultPage(driver);
+	}
+}
+</code></pre>
+
+<h2 id="推荐的做法:7dbf58256fe9adba2caee2327d472e2f">推荐的做法</h2>
+
+<ul>
+<li>public 方法暴露Page对象的服务</li>
+<li>WebElement,Driver相关页面UI细节尽可能隐藏</li>
+<li>尽量减少Page对象中的Assertion</li>
+<li>到达新的Page，在方法中返回其它Page,甚至同一页面也可以返回Page做链式操作</li>
+<li>一个Page对象不需要关注所有细节，只关心需要的对象，需要时再补充</li>
+<li>不同的结果，同一个操作可以用不同的方法。</li>
+</ul>
+
+<h2 id="appium-中使用page-object-pattern:7dbf58256fe9adba2caee2327d472e2f">Appium 中使用Page Object Pattern</h2>
+
+<p>Appium的Java Client是基于WebDriver的，但有了一些改进。比如元素定位不到，Appium Java Client会将Locator详细信息抛出，而Selenium没有。</p>
+
+<h2 id="wait:7dbf58256fe9adba2caee2327d472e2f">Wait</h2>
+
+<p>移动自动化测试Wait是很关键的一个动作，既关乎正确性，也关乎效率，我们应该极力避免使用Thread.sleep()或Sleeper.sleepTight()。Appium的客户端提供了一个类AppiumFieldDecorator可以很方便的设置ImplicitlyWaitTimeOut。FieldDecorator顾名思义，是Page对象Field的Decorator，PageFactory主要就是在Feild上下功夫，将WebElement类型的Feild使用Proxy方法，创建一个增强的WebElement,这个成员在每次操作时，都会先使用注解的定位策略定位，然后再调用WebElement的方法，当然可以通过CacheLookup注解，来缓存定位结果（尽量不这么做)。</p>
+
+<pre><code class="language-java">PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), pageObject);
+</code></pre>
+
+<p>如果等待某个页面元素是否可见，在PageObject中也更简单</p>
+
+<pre><code class="language-java">public static void untilElementVisable(final WebElement element,int timeoutInSeconds){
+  new Wait() {
+     @Override
+     public boolean until() {
+	return element.isDisplayed();
+     }
+   }.wait(String.format(&quot;Timed out waiting for %s. Waited %s&quot;,
+		  element, timeoutInSeconds), timeoutInSeconds);
+}
+
+</code></pre>
+
+<h2 id="findby:7dbf58256fe9adba2caee2327d472e2f">FindBy</h2>
+
+<p>在Appium中你会遇到，Selendroid模式和UIAutomator定位差异，比如Selendroid的linkText在UIAutomator中用name,还有就是iOS脚本想和Android共用一份。这在Appium中有了很好的扩充，Appium客户端会在运行时决定使用哪个Annotation来装饰WebElement。</p>
+
+<pre><code class="language-java">    @FindBy(name=&quot;text&quot;)
+    @SelendroidFindBy(name = &quot;text1&quot;)
+    @iOSFindBy(id=&quot;sth&quot;)
+    private WebElement textSelendroid;
+</code></pre>
+
+<h2 id="elementinterceptor:7dbf58256fe9adba2caee2327d472e2f">ElementInterceptor</h2>
+
+<p>总是有这样或那样的原因，需要记录日志，如果方法的执行每一步都要手写是很痛苦的，自然我们想到了AOP。在Selenium中EventFiringWebDriver类可以方便的记录日志，但是在Appium客户端中，我们可以修改AppiumFieldDecorator中ElementInterceptor来加入自己的日志信息，不过暂时这个功能Appium Client没有暴露出来，需要自己fork个repo修改下。</p>
+
+<h2 id="参考:7dbf58256fe9adba2caee2327d472e2f">参考</h2>
+
+<p><a href="http://assertselenium.com/automation-design-practices/page-object-pattern/">http://assertselenium.com/automation-design-practices/page-object-pattern/</a>
+<a href="https://code.google.com/p/selenium/wiki/LoadableComponent">https://code.google.com/p/selenium/wiki/LoadableComponent</a>
+<a href="https://code.google.com/p/selenium/wiki/PageObjects">https://code.google.com/p/selenium/wiki/PageObjects</a>
+<a href="https://code.google.com/p/selenium/wiki/PageFactory">https://code.google.com/p/selenium/wiki/PageFactory</a>
+<a href="https://github.com/FluentLenium/FluentLenium">https://github.com/FluentLenium/FluentLenium</a>
+<a href="https://github.com/countableSet/webdriver-demo">https://github.com/countableSet/webdriver-demo</a></p>
+
+  </div>
+</div>
+<script src="http://localhost:1313/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-64429204-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+

@@ -6,17 +6,8 @@
     <description>Recent content on 技术&amp;生活</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jul 2015 12:05:03 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2015 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://cosyman.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>about</title>
-      <link>http://cosyman.github.io/about/</link>
-      <pubDate>Sat, 04 Jul 2015 12:05:03 +0800</pubDate>
-      
-      <guid>http://cosyman.github.io/about/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>纪念好友朱全</title>
@@ -242,98 +233,6 @@
 &lt;a href=&#34;https://code.google.com/p/selenium/wiki/PageFactory&#34;&gt;https://code.google.com/p/selenium/wiki/PageFactory&lt;/a&gt;
 &lt;a href=&#34;https://github.com/FluentLenium/FluentLenium&#34;&gt;https://github.com/FluentLenium/FluentLenium&lt;/a&gt;
 &lt;a href=&#34;https://github.com/countableSet/webdriver-demo&#34;&gt;https://github.com/countableSet/webdriver-demo&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>FreeMarker Template</title>
-      <link>http://cosyman.github.io/blog/2015/01/29/freemarker-template/</link>
-      <pubDate>Thu, 29 Jan 2015 22:26:00 +0800</pubDate>
-      
-      <guid>http://cosyman.github.io/blog/2015/01/29/freemarker-template/</guid>
-      <description>
-
-&lt;p&gt;Java中不乏优秀的模板引擎，Velocity,
-&lt;a href=&#34;https://github.com/mvel/mvel[mvel],FreeMarker等。在构建框架的时候，通常可以拿来即用，但我们需要控制它。最近需要一个数据准备的框架，便选择了FreeMarker，FreeMarker使用起来很简单，data+template=out.今天主要写一下其中template加载组件TemplateLoader&#34;&gt;https://github.com/mvel/mvel[mvel],FreeMarker等。在构建框架的时候，通常可以拿来即用，但我们需要控制它。最近需要一个数据准备的框架，便选择了FreeMarker，FreeMarker使用起来很简单，data+template=out.今天主要写一下其中template加载组件TemplateLoader&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;templateloader的实现:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;TemplateLoader的实现&lt;/h2&gt;
-
-&lt;p&gt;作为一个模板文件加载的抽象，自然不能限制模板来自何方，在FreeMarker中由几个主要的实现类来体现，这些TemplateLoader是可以独立使用的，Webapp需要Servlet环境。当然你可以实现自己的TemplateLoader.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;StringTemplateLoader 直接将内存中的String对象放入并使用&lt;/li&gt;
-&lt;li&gt;FileTemplateLoader 本地文件目录&lt;/li&gt;
-&lt;li&gt;ClassTemplateLoader ClassPath 加载&lt;/li&gt;
-&lt;li&gt;WebappTemplateLoader  ServletContext&lt;/li&gt;
-&lt;li&gt;MultiTemplateLoader 多个TemplateLoader的叠加，顺序按照数组的顺序优先加载&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;stringtemplateloader:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;StringTemplateLoader&lt;/h3&gt;
-
-&lt;p&gt;刚开始总觉得StringTemplateLoader简单，其实挺麻烦，而且也无大用。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Test
-public void testStringTL() throws IOException {
-	StringTemplateLoader stl = new StringTemplateLoader();
-	String template = &amp;quot;${key}&amp;quot;;
-	stl.putTemplate(&amp;quot;hello&amp;quot;, template);
-	Object source = stl.findTemplateSource(&amp;quot;hello&amp;quot;);
-	Reader reader = stl.getReader(source, &amp;quot;utf-8&amp;quot;);
-	String dest = IOUtils.toString(reader);
-	Assert.assertEquals(template, dest);
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;multitemplateloader:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;MultiTemplateLoader&lt;/h3&gt;
-
-&lt;p&gt;TemplateLoader是可以多种类型，同种类型组合起来使用的，查询顺序按照数组的顺序优先。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Test
-public void testMultiTL() throws IOException {
-	TemplateLoader ctl = new ClassTemplateLoader(TemplateLoaderTest.class,
-			&amp;quot;/&amp;quot;);
-	TemplateLoader ftl1 = new FileTemplateLoader(new File(
-			System.getProperty(&amp;quot;user.dir&amp;quot;)));
-	MultiTemplateLoader mtl = new MultiTemplateLoader(new TemplateLoader[] {
-			ftl1,ctl  });
-
-	Object source = mtl.findTemplateSource(&amp;quot;test.ftl&amp;quot;);
-	Reader reader = mtl.getReader(source, &amp;quot;utf-8&amp;quot;);
-	String dest = IOUtils.toString(reader);
-	Assert.assertEquals(&amp;quot;${hello}&amp;quot;, dest);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;通常在configuration中使用-才能方便的处理freemarker的表达式:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;通常在Configuration中使用，才能方便的处理FreeMarker的表达式&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Test
-public void testInConfiguration() throws IOException {
-	Configuration configuration = new Configuration(
-			Configuration.VERSION_2_3_21);
-	configuration.setDefaultEncoding(&amp;quot;utf-8&amp;quot;);
-	TemplateLoader ctl = new ClassTemplateLoader(TemplateLoaderTest.class,
-			&amp;quot;/&amp;quot;);
-	TemplateLoader ftl1 = new FileTemplateLoader(new File(
-			System.getProperty(&amp;quot;user.dir&amp;quot;)));
-	MultiTemplateLoader mtl = new MultiTemplateLoader(new TemplateLoader[] {
-			ftl1,ctl });
-	configuration.setTemplateLoader(mtl);
-	//configuration.getTemplate(&amp;quot;test.ftl&amp;quot;).process(data, out);
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;其它:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;其它&lt;/h2&gt;
-
-&lt;h3 id=&#34;缓存:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;缓存&lt;/h3&gt;
-
-&lt;p&gt;模板加载通常是耗费资源的，默认是开启缓存的，缓存的实现，是否使用缓存取决于你&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;configuration.setCacheStorage(new freemarker.cache.NullCacheStorage());
-
-configuration.clearTemplateCache();
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

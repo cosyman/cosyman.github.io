@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on 技术&amp;生活</title>
+    <link>http://localhost:1313/categories/java/</link>
+    <description>Recent content in Java on 技术&amp;生活</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Jan 2015 00:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Freemarker Template</title>
+      <link>http://localhost:1313/blog/2015/01/09/freemarker-template/</link>
+      <pubDate>Fri, 09 Jan 2015 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/2015/01/09/freemarker-template/</guid>
+      <description>
+
+&lt;p&gt;Java中不乏优秀的模板引擎，Velocity,&lt;a href=&#34;https://github.com/mvel/mvel&#34;&gt;mvel&lt;/a&gt;,FreeMarker等。在构建框架的时候，通常可以拿来即用，但我们需要控制它。最近需要一个数据准备的框架，便选择了FreeMarker，FreeMarker使用起来很简单，data+template=out.今天主要写一下其中template加载组件TemplateLoader&lt;/p&gt;
+
+&lt;h2 id=&#34;templateloader的实现:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;TemplateLoader的实现&lt;/h2&gt;
+
+&lt;p&gt;作为一个模板文件加载的抽象，自然不能限制模板来自何方，在FreeMarker中由几个主要的实现类来体现，这些TemplateLoader是可以独立使用的，Webapp需要Servlet环境。当然你可以实现自己的TemplateLoader.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;StringTemplateLoader 直接将内存中的String对象放入并使用&lt;/li&gt;
+&lt;li&gt;FileTemplateLoader 本地文件目录&lt;/li&gt;
+&lt;li&gt;ClassTemplateLoader ClassPath 加载&lt;/li&gt;
+&lt;li&gt;WebappTemplateLoader  ServletContext&lt;/li&gt;
+&lt;li&gt;MultiTemplateLoader 多个TemplateLoader的叠加，顺序按照数组的顺序优先加载&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;stringtemplateloader:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;StringTemplateLoader&lt;/h3&gt;
+
+&lt;p&gt;刚开始总觉得StringTemplateLoader简单，其实挺麻烦，而且也无大用。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Test
+public void testStringTL() throws IOException {
+	StringTemplateLoader stl = new StringTemplateLoader();
+	String template = &amp;quot;${key}&amp;quot;;
+	stl.putTemplate(&amp;quot;hello&amp;quot;, template);
+	Object source = stl.findTemplateSource(&amp;quot;hello&amp;quot;);
+	Reader reader = stl.getReader(source, &amp;quot;utf-8&amp;quot;);
+	String dest = IOUtils.toString(reader);
+	Assert.assertEquals(template, dest);
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;multitemplateloader:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;MultiTemplateLoader&lt;/h3&gt;
+
+&lt;p&gt;TemplateLoader是可以多种类型，同种类型组合起来使用的，查询顺序按照数组的顺序优先。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Test
+public void testMultiTL() throws IOException {
+	TemplateLoader ctl = new ClassTemplateLoader(TemplateLoaderTest.class,
+			&amp;quot;/&amp;quot;);
+	TemplateLoader ftl1 = new FileTemplateLoader(new File(
+			System.getProperty(&amp;quot;user.dir&amp;quot;)));
+	MultiTemplateLoader mtl = new MultiTemplateLoader(new TemplateLoader[] {
+			ftl1,ctl  });
+
+	Object source = mtl.findTemplateSource(&amp;quot;test.ftl&amp;quot;);
+	Reader reader = mtl.getReader(source, &amp;quot;utf-8&amp;quot;);
+	String dest = IOUtils.toString(reader);
+	Assert.assertEquals(&amp;quot;${hello}&amp;quot;, dest);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;通常在configuration中使用-才能方便的处理freemarker的表达式:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;通常在Configuration中使用，才能方便的处理FreeMarker的表达式&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Test
+public void testInConfiguration() throws IOException {
+	Configuration configuration = new Configuration(
+			Configuration.VERSION_2_3_21);
+	configuration.setDefaultEncoding(&amp;quot;utf-8&amp;quot;);
+	TemplateLoader ctl = new ClassTemplateLoader(TemplateLoaderTest.class,
+			&amp;quot;/&amp;quot;);
+	TemplateLoader ftl1 = new FileTemplateLoader(new File(
+			System.getProperty(&amp;quot;user.dir&amp;quot;)));
+	MultiTemplateLoader mtl = new MultiTemplateLoader(new TemplateLoader[] {
+			ftl1,ctl });
+	configuration.setTemplateLoader(mtl);
+	//configuration.getTemplate(&amp;quot;test.ftl&amp;quot;).process(data, out);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;其它:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;其它&lt;/h2&gt;
+
+&lt;h3 id=&#34;缓存:f0ce66837e1e420c9d8011dfac968f38&#34;&gt;缓存&lt;/h3&gt;
+
+&lt;p&gt;模板加载通常是耗费资源的，默认是开启缓存的，缓存的实现，是否使用缓存取决于你&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;configuration.setCacheStorage(new freemarker.cache.NullCacheStorage());
+
+configuration.clearTemplateCache();
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HttpClient Ultimate Document</title>
+      <link>http://localhost:1313/blog/2015/01/09/httpclient-ultimate-document/</link>
+      <pubDate>Fri, 09 Jan 2015 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/2015/01/09/httpclient-ultimate-document/</guid>
+      <description>
+
+&lt;p&gt;Apache HttpClient，在工作中经常使用，可用起来并不完全那样，尤其是对于初学者。&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-start:08c27e35c31228b75b3b30fc17cdcb81&#34;&gt;Quick Start&lt;/h2&gt;
+
+&lt;p&gt;首先，从fluent-hc开始，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;URI uri = new URIBuilder(&amp;quot;http://www.baidu.com/s&amp;quot;).addParameter(&amp;quot;wd&amp;quot;,
+    &amp;quot;simple is not easy&amp;quot;).build();
+
+String entity = Request.Get(uri).connectTimeout(1000)
+    .socketTimeout(1000).execute().returnContent().asString();
+
+assertThat(entity, new StringContains(&amp;quot;simple&amp;quot;));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;简单来看，的确是对Request/Response的处理，&lt;/p&gt;
+
+&lt;h2 id=&#34;httpmessage:08c27e35c31228b75b3b30fc17cdcb81&#34;&gt;HttpMessage&lt;/h2&gt;
+
+&lt;h2 id=&#34;httprequest:08c27e35c31228b75b3b30fc17cdcb81&#34;&gt;HttpRequest&lt;/h2&gt;
+
+&lt;h2 id=&#34;httpresponse:08c27e35c31228b75b3b30fc17cdcb81&#34;&gt;HttpResponse&lt;/h2&gt;
+
+&lt;h2 id=&#34;httpclient:08c27e35c31228b75b3b30fc17cdcb81&#34;&gt;HttpClient&lt;/h2&gt;
+
+&lt;h2 id=&#34;https:08c27e35c31228b75b3b30fc17cdcb81&#34;&gt;HTTPS&lt;/h2&gt;
+
+&lt;p&gt;Cipher 将cleartext/plaintest 转换成ciphertext&lt;/p&gt;
+
+&lt;p&gt;Keyed Cipers  key是码的位移量&lt;/p&gt;
+
+&lt;p&gt;Digital Key，very large keys&lt;/p&gt;
+
+&lt;p&gt;对称秘钥算法 导致双方维护秘钥2^n个秘钥对
+非对称秘钥，用public key encoding，private key decoding&lt;/p&gt;
+
+&lt;p&gt;Hybrid Cryptosystems 非对称connection，对称临时短暂的交流，满足效率。&lt;/p&gt;
+
+&lt;p&gt;Digital Signatures  private key checksum&lt;/p&gt;
+
+&lt;p&gt;Digital Certificates id card&lt;/p&gt;
+
+&lt;p&gt;Proxy method connect to forword&lt;/p&gt;
+
+&lt;h2 id=&#34;tips:08c27e35c31228b75b3b30fc17cdcb81&#34;&gt;Tips&lt;/h2&gt;
+
+&lt;h2 id=&#34;reference:08c27e35c31228b75b3b30fc17cdcb81&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://hc.apache.org/httpcomponents-core-4.4.x/tutorial/html/index.html[HttpCore&#34;&gt;http://hc.apache.org/httpcomponents-core-4.4.x/tutorial/html/index.html[HttpCore&lt;/a&gt; Tutorial]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://hc.apache.org/httpcomponents-client-4.4.x/tutorial/html/index.html[HttpClient&#34;&gt;http://hc.apache.org/httpcomponents-client-4.4.x/tutorial/html/index.html[HttpClient&lt;/a&gt; Tutorial]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tools.ietf.org/html/rfc7230[Hypertext&#34;&gt;https://tools.ietf.org/html/rfc7230[Hypertext&lt;/a&gt; Transfer Protocol (HTTP/1.1): Message Syntax and Routing]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tools.ietf.org/html/rfc7231[Hypertext&#34;&gt;https://tools.ietf.org/html/rfc7231[Hypertext&lt;/a&gt; Transfer Protocol (HTTP/1.1): Semantics and Content]&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
