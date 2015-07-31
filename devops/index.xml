@@ -34,20 +34,18 @@
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class BaiduSearchPage {
 
 	protected WebDriver driver;
-        @FindBy(id=&amp;quot;kw&amp;quot;)
+  @FindBy(id=&amp;quot;kw&amp;quot;)
 	private WebElement kw;
 	private WebElement su;
 
 	public BaiduSearchPage(WebDriver driver) {
 		super();
 		this.driver = driver;
-                PageFactory.initElements(driver, this);
+    PageFactory.initElements(driver, this);
 	}
-
 	public void load(String url) {
 		driver.get(url);
 	}
-
 	public ResultPage search(String key) {
 		kw.clear();
 		kw.sendKeys(key);
@@ -97,10 +95,10 @@
 
 &lt;p&gt;在Appium中你会遇到，Selendroid模式和UIAutomator定位差异，比如Selendroid的linkText在UIAutomator中用name,还有就是iOS脚本想和Android共用一份。这在Appium中有了很好的扩充，Appium客户端会在运行时决定使用哪个Annotation来装饰WebElement。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    @FindBy(name=&amp;quot;text&amp;quot;)
-    @SelendroidFindBy(name = &amp;quot;text1&amp;quot;)
-    @iOSFindBy(id=&amp;quot;sth&amp;quot;)
-    private WebElement textSelendroid;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@FindBy(name=&amp;quot;text&amp;quot;)
+@SelendroidFindBy(name = &amp;quot;text1&amp;quot;)
+@iOSFindBy(id=&amp;quot;sth&amp;quot;)
+private WebElement textSelendroid;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;elementinterceptor:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;ElementInterceptor&lt;/h2&gt;
