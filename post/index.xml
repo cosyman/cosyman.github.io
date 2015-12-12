@@ -1,23 +1,201 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 技术&amp;生活</title>
-    <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on 技术&amp;生活</description>
+    <title>Posts on 兰天</title>
+    <link>http://cosyman.github.io/post/</link>
+    <description>Recent content in Posts on 兰天</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2015 00:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <managingEditor>cosman@outlook.com (兰天)</managingEditor>
+    <webMaster>cosman@outlook.com (兰天)</webMaster>
+    <lastBuildDate>Thu, 24 Sep 2015 21:57:14 +0800</lastBuildDate>
+    <atom:link href="http://cosyman.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>第一次分享</title>
+      <link>http://cosyman.github.io/blog/2015/09/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Thu, 24 Sep 2015 21:57:14 +0800</pubDate>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/09/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%88%86%E4%BA%AB/</guid>
+      <description>
+
+&lt;p&gt;最近HR组织了Java系列的培训，当初在Build团队，因此理所当然的选择了Maven。私下也就开始 关注一些Maven的文章和Maven开发者的动态。虽然自己也有5年的Maven使用经验了，而且也都是团队 中Maven最懂的那个，可发现Maven涉及的面太广了，这些天也在恶补Continuous Integration， Continuous Delivery，Continuous Deployment等，虽然大部分都懂了，可是每个小细节都得去 验证，甚至某个单词发音都要不停的去确认，显然我太紧张了。&lt;/p&gt;
+
+&lt;p&gt;然而，直到分享的前一天晚上10点钟，我才打开keynote。之前几乎没有用过PPT，对它是恐惧的。之前 几次培训是直接Confluence，Markdown来的，但总感觉这次培训没有keynote，对不起听众，刚开始 列表格式都要百度，12点多了，才弄了一页keynote，带列表的。看老婆大着肚子陪我，我也只好睡了， 身体也不能熬夜了，一夜有些忐忑。&lt;/p&gt;
+
+&lt;p&gt;早上起来，老婆做辣椒饼，我的keynote还没做2页，就吃饭了。到了公司，Leader也就基本上给我时间 了，中午Team Building，饭没有完，我就跑回来了，听说培训室里Mac不能连接投影仪，心好慌，就做 两手准备了，下午1点多keynote终于有了十几页，到3点多25页就交给HR了。到了培训室竟然可以连接 Mac，庆幸了一把。&lt;/p&gt;
+
+&lt;p&gt;讲的东西大都是概念，听众感觉大都没有多少开发经验，有点茫然，我就有点慌了，跳过一些比较晦涩的， 好不容易坚持到最后，一看时间58分钟，啊，还好一个小时左右，可以结束了。&lt;/p&gt;
+
+&lt;p&gt;当然还是表达了一些Java社区和开源生态的文化，我想对于dotnet开发人员比较重要吧，最后一个同学 问问题Maven如何做模块化和分层划分，这个问题我是思考实践很久了的，模块优于分层，具体问题模块 也可以只用package区分。当时比较懵，后面一句没加。&lt;/p&gt;
+
+&lt;h2 id=&#34;教训:cb45cef30d12b540852560d925887cef&#34;&gt;教训&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;充分的准备，并不是对领域足够了解，有很深刻的认识就够了。还要把知识找到载体，有效的传达，比如如何让keynote做的更形象生动，有乐趣而直观的让听众接受&lt;/li&gt;
+&lt;li&gt;keynote/ppt的简单使用，还是逃不掉的&lt;/li&gt;
+&lt;li&gt;演示的时候，要淡定，尽量准备多个完整的demo，林场时方能不乱&lt;/li&gt;
+&lt;li&gt;准备的再好，对于非专业者，还是会打折很多的，因此准备，准备，准备&lt;/li&gt;
+&lt;li&gt;思想的巨人，行动的矮子；多把思考记录下来吧&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;分享完后，有些失落。在携程，除了刚来时候做了框架，后来就像狗一样啃骨头，填坑，自动化组啃，又借调到Build组啃食杂物，又继续啃MobileCD组剩的杂物，锻炼了这填坑，啃杂物，忍耐的能力。越是喜欢Java，越是卑微。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>记一次劳动争议</title>
+      <link>http://cosyman.github.io/blog/2015/08/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8A%B3%E5%8A%A8%E4%BA%89%E8%AE%AE/</link>
+      <pubDate>Fri, 28 Aug 2015 17:39:57 +0800</pubDate>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/08/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8A%B3%E5%8A%A8%E4%BA%89%E8%AE%AE/</guid>
+      <description>
+
+&lt;p&gt;老婆是做猎头的，也算是比较优秀的猎头了，他能赢得优秀工程师的信任，包括很多个性奇特的工程师，并且能尽力维护候选人的利益。怀孕后，老婆公司找了些case以重大经济损失和严重违反公司规章制度为由开除了老婆，于是便开始了我们的劳动争议。其实遇到这种事情，就是倒大霉了，不管能不能赢得诉求,你都会损失，各种压力，时间，精力上的浪费，还有断了社保后的问题。&lt;/p&gt;
+
+&lt;h2 id=&#34;流程:71d6126b64392bed63537027d7597d6d&#34;&gt;流程&lt;/h2&gt;
+
+&lt;p&gt;犯了一个错误就是，劳动争议的开始仲裁员会让申诉人陈述诉求，这个时候一定要说完，我老婆在快结束时，才提其它几个诉求，显然驳回了。即便重要的诉求，只怪自己没有提前学习下流程，主要也就注意这点。&lt;/p&gt;
+
+&lt;h2 id=&#34;事实:71d6126b64392bed63537027d7597d6d&#34;&gt;事实&lt;/h2&gt;
+
+&lt;p&gt;法律讲的是事实，自然事实与法律事实。老婆总是想当然，以为太明显的事情，然要用事实说话。&lt;/p&gt;
+
+&lt;h2 id=&#34;准备:71d6126b64392bed63537027d7597d6d&#34;&gt;准备&lt;/h2&gt;
+
+&lt;p&gt;每个诉求，理由，证据都要准备好（公司有责任提供更多的证据），最好法律法规也都清楚，能找到个律师朋友相助当然是最好了。其实准备的过程中也是学习最多阶段。&lt;/p&gt;
+
+&lt;h2 id=&#34;公正:71d6126b64392bed63537027d7597d6d&#34;&gt;公正&lt;/h2&gt;
+
+&lt;p&gt;公正是难的，仲裁员是要理智的，即使面对台下各种耍小聪明，营私舞弊之人，也不能脱口大骂，要忍住然后千思万绪的理清，为受害人争取最大利益。&lt;/p&gt;
+
+&lt;p&gt;公正，真的有公正吗？这个社会你自然可以相信公正，毕竟大部分人在往幸福的路上，也渴望公正，但做到公正是难的，靠制度，靠执行，更要靠自己的能力去努力争取。&lt;/p&gt;
+
+&lt;h2 id=&#34;舆论:71d6126b64392bed63537027d7597d6d&#34;&gt;舆论&lt;/h2&gt;
+
+&lt;p&gt;很多时候，如果法律都解决不了的事情，我们会诉诸于舆论。事发后，有个猎头圈比较有影响的人要为老婆声援，还好被老婆拒绝了，还有一些腾讯等工程师然而我们最终没有采用舆论方式，害怕它的毁灭性会太大，老婆公司毕竟是一家小公司。如若是BAT这样的公司，做这种不光彩的事情，我想我们应该舆论，然而舆论并不能伤害到他们什么&lt;/p&gt;
+
+&lt;h2 id=&#34;幸运:71d6126b64392bed63537027d7597d6d&#34;&gt;幸运&lt;/h2&gt;
+
+&lt;p&gt;前段时间，我们阴差阳错的没有买到房子真是幸运，否则老婆失业，我们家已然要破产了。&lt;/p&gt;
+
+&lt;p&gt;做软件工程师和猎头是幸运的，因为这两个行业都是可以快速大量学习的行业，也能体现更多的价值，这群人在社会中也大都是更优秀，单纯，有正义感的。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Build系统介绍</title>
+      <link>http://cosyman.github.io/blog/2015/05/build%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Sat, 09 May 2015 00:00:00 +0800</pubDate>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/05/build%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;好的IDE做Build工具的Wrapper，Build平台也应只做Build工具的Wrapper，大量散乱的Build脚步应被组织起来，演变为Build工具&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;10000公里俯瞰build:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;10000公里俯瞰Build&lt;/h2&gt;
+
+&lt;p&gt;Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。而Build平台可以最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发)吧，只有他们有责任和欲望演进构建的脚步，我们应致力于Build平台体验和好的构建根据的引入与研发。&lt;/p&gt;
+
+&lt;p&gt;现代Build系统,构建分享的舞台，中转站，生产与消费，依赖关系图，有向无环Task图。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/cosyman/cosyman-hugo/master/static/images/devops/deg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;scm:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;SCM&lt;/h2&gt;
+
+&lt;h2 id=&#34;configuration-manager-system:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Configuration Manager System&lt;/h2&gt;
+
+&lt;p&gt;虽然仅仅是flavor，可用抽象为独立的服务，并且最好抽象为独立的服务&lt;/p&gt;
+
+&lt;h2 id=&#34;profile:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Profile&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;平台的独立性
+2.不同的调料,当发现api传递很多参赛时，应该考虑这些参数是否需要暴露，是否是开放决定的，然后分组，暴露profile&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;script-dsl:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Script/DSL&lt;/h2&gt;
+
+&lt;h2 id=&#34;repository:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Repository&lt;/h2&gt;
+
+&lt;p&gt;提供了消费者提供者的舞台，内部繁荣。利于模块化的实践，在facebook专门开发工具，鼓励代码小模块的实践，加速构建速度。&lt;/p&gt;
+
+&lt;p&gt;中心化，所有被依赖的产出注册&lt;/p&gt;
+
+&lt;p&gt;结合git的tag管理，充分利用scm和代码密切联系，减少二次存放&lt;/p&gt;
+
+&lt;p&gt;本地缓存，局域网代理，缓存，高可用。&lt;/p&gt;
+
+&lt;h2 id=&#34;artifact:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Artifact&lt;/h2&gt;
+
+&lt;h3 id=&#34;version:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Version&lt;/h3&gt;
+
+&lt;p&gt;具体参考sem。通常为了开发方便，可以设置一种time changing 版本，每次构建都会获取最新的版本，显然它应该限制在生产环境，在maven中体现为Snapshot机制&lt;/p&gt;
+
+&lt;p&gt;版本应该直接体现在构建的文件名字当中，避免不必要的错误。&lt;/p&gt;
+
+&lt;h3 id=&#34;依赖:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;依赖&lt;/h3&gt;
+
+&lt;p&gt;大型的互联网的系统，依赖图也将非常复杂，它至少支持，依赖传递与中断或排除，以及版本冲突的选择策略定制。当然比如在Java中，可以通过ClassLoader的定义，避免版本冲突，尤其在Java9中有了更好的支持&lt;/p&gt;
+
+&lt;h2 id=&#34;lifecycle:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Lifecycle&lt;/h2&gt;
+
+&lt;p&gt;生命周期的定义，意味着某种构建的抽象可能性，尤其对于DotNet，Java等平台，甚至每种构建都本身是一种标准，比如Java中war，ear等，它可以帮助吧约定胜于配置的理念发挥到极致，同时Lifecycle也通常意味着不变，对于灵活性&lt;/p&gt;
+
+&lt;h2 id=&#34;task-graph-goal:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Task Graph/Goal&lt;/h2&gt;
+
+&lt;p&gt;同样对于Task也应是一种有向无环图，这在Gradle Gulp等工具中显得特别重要&lt;/p&gt;
+
+&lt;h2 id=&#34;best-practices:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Best Practices&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Build Script 由开发维护，作为代码的一部分&lt;/li&gt;
+&lt;li&gt;一致性，本地，server端。&lt;/li&gt;
+&lt;li&gt;关注点分离，self-contained的完整的输入输出及处理周期。&lt;/li&gt;
+&lt;li&gt;根本上关注构建体验，分而治之。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;cbuilder-s-anti-pattern:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Cbuilder&amp;rsquo;s Anti Pattern&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;SCM项目源码依赖&amp;ndash;&amp;gt;SCM目录依赖&amp;ndash;&amp;gt;SCM文件依赖 中间仓库，源码以来意味着依赖的交付为源码，JDK的开发中比如jshell，http2&lt;/li&gt;
+&lt;li&gt;BuildScript过重，没有转给开发，Build Engineer的出现&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;develop-build-tool:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Develop Build Tool&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Build 是严肃的，稳定&lt;/li&gt;
+&lt;li&gt;Build 应该被合理的组织&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;references:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&#34;&gt;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.virginia.edu/~dww4s/articles/build_systems.html&#34;&gt;Overview of  Build&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.open-open.com/doc/view/4058453cde4b429c82ff2807d8aa81f0&#34;&gt;淘宝Maven培训&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://devops.com/2014/07/29/continuous-delivery-pipeline/&#34;&gt;http://devops.com/2014/07/29/continuous-delivery-pipeline/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://semver.org&#34;&gt;版本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.infoq.com/presentations/cd-gradle-jenkins&#34;&gt;http://www.infoq.com/presentations/cd-gradle-jenkins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.nuget.org/20150729/Introducing-nuget-uwp.html&#34;&gt;NuGet Package Name&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dzone.com/refcardz/designing-quality-software&#34;&gt;Dependency Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dzone.com/refcardz/getting-started-repository&#34;&gt;Repository Management&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>纪念好友朱全</title>
-      <link>http://localhost:1313/blog/2015/05/09/%E7%BA%AA%E5%BF%B5%E5%A5%BD%E5%8F%8B%E6%9C%B1%E5%85%A8/</link>
+      <link>http://cosyman.github.io/blog/2015/05/%E7%BA%AA%E5%BF%B5%E5%A5%BD%E5%8F%8B%E6%9C%B1%E5%85%A8/</link>
       <pubDate>Sat, 09 May 2015 00:00:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/2015/05/09/%E7%BA%AA%E5%BF%B5%E5%A5%BD%E5%8F%8B%E6%9C%B1%E5%85%A8/</guid>
-      <description>&lt;p&gt;于15年5月9日，听到高中的好友朱权离世，此时他已经是3岁女儿的父亲，年仅26岁。&lt;/p&gt;
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/05/%E7%BA%AA%E5%BF%B5%E5%A5%BD%E5%8F%8B%E6%9C%B1%E5%85%A8/</guid>
+      <description>&lt;p&gt;于15年5月9日，听到高中的好友朱全离世，此时他已经是3岁女儿的父亲，年仅26岁。&lt;/p&gt;
 
-&lt;p&gt;高中他是我最好的朋友，让我们能相处在一起，应该是他的豪爽，义气，然后又愤世嫉俗，最重要的是真，这也是我后来成长的路上一直在探寻的真性情。我们鄙视那些坐在前排的“好学生”，正因如此坐在后排有了更多的交流，但我们也算努力学习。高二时班里来了个杨小强，理科牛逼的人，上课也爱抢答老师的问题，出风头，我和朱权都看不惯，站在统一战线上，那时还有杨维峰，朱孟君。当时我是比较自卑的人，而朱权是我最可靠的朋友，在高二高三那一段压抑的时间里，他给了我最重要的认同感，去坚持自己，在暗恋时的各种揪心，中午睡不着就跑到他住的那个楼上找他聊天，我想那时候我比较自私吧。&lt;/p&gt;
+&lt;p&gt;高中他是我最好的朋友，让我们能相处在一起，应该是他的豪爽，义气，然后又愤世嫉俗，最重要的是真，这也是我后来成长的路上一直在探寻的真性情。我们鄙视那些坐在前排的“好学生”，正因如此坐在后排有了更多的交流，但我们也算努力学习。高二时班里来了个杨小强，理科牛逼的人，上课也爱抢答老师的问题，出风头，我和朱全都看不惯，站在统一战线上，那时还有杨维峰，朱孟君。当时我是比较自卑的人，而朱全是我最可靠的朋友，在高二高三那一段压抑的时间里，他给了我最重要的认同感，去坚持自己，在暗恋时的各种揪心，中午睡不着就跑到他住的那个楼上找他聊天，我想那时候我比较自私吧。&lt;/p&gt;
 
 &lt;p&gt;高考过后每家的吃饭，到了他家，我记得有花生米很好吃，也是第一次去他家，感觉应该是我们班比较穷的吧，当时还书生意气，想着以后若自己混的好了一定不能忘了他。&lt;/p&gt;
 
@@ -27,7 +205,7 @@
 
 &lt;p&gt;大三暑假我被亲戚带进了传销，后来我也就着了魔一样决定把财富带给他，他是一个耿直的人，没有呆几天就发现是骗局，便不快的离开了，于是我们便产生了很大的隔阂，我从传销中出来后，在合肥找了份工作实习，便尽最大努力把一些朋友说服出来，在经济上也极尽全力，也一直和他联系，去解除那次隔阂。毕业后依然在合肥工作，我们偶尔还能聚聚，杨小强，小营，喝酒时候他和小强都用大杯，我和小营就被照顾了。&lt;/p&gt;
 
-&lt;p&gt;毕业在合肥的那一年也比较苦，吃方便面，老大钓鱼分了很多，我就清水煮了吃，一次去看朱权，买了一箱很贵的舒化奶，他说买什么东西，我没说什么，心里其实在感叹，心里越苦，越希望好朋友能过的好些。那一次好像找回了当年高中的感觉，如果经常在一起应该还会是密切的好朋友&lt;/p&gt;
+&lt;p&gt;毕业在合肥的那一年也比较苦，吃方便面，老大钓鱼分了很多，我就清水煮了吃，一次去看朱全，买了一箱很贵的舒化奶，他说买什么东西，我没说什么，心里其实在感叹，心里越苦，越希望好朋友能过的好些。那一次好像找回了当年高中的感觉，如果经常在一起应该还会是密切的好朋友&lt;/p&gt;
 
 &lt;p&gt;没多久觉得自己该离开合肥去大城市了，便匆忙带着女友去了杭州，从此以后我们就很少见面了，偶尔打个电话，但总感觉电话中和他的话不如和小营多。&lt;/p&gt;
 
@@ -39,14 +217,15 @@
 
 &lt;p&gt;安息&lt;/p&gt;
 
-&lt;p&gt;附上一些朱权的说说状态&lt;/p&gt;
+&lt;p&gt;附上一些朱全的说说状态&lt;/p&gt;
 
 &lt;p&gt;2015年1月16日&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;九华山之旅圆满完成
-&lt;img src=&#34;http://localhost:1313/images/life/xiaoquan.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;九华山之旅圆满完成&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cosyman.github.io/images/life/xiaoquan.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2014年11月9日&lt;/p&gt;
 
@@ -88,10 +267,10 @@
     
     <item>
       <title>我的2014，相对奢侈的生活</title>
-      <link>http://localhost:1313/blog/2015/02/13/%E6%88%91%E7%9A%842014%E7%9B%B8%E5%AF%B9%E5%A5%A2%E4%BE%88%E7%9A%84%E7%94%9F%E6%B4%BB/</link>
+      <link>http://cosyman.github.io/blog/2015/02/%E6%88%91%E7%9A%842014%E7%9B%B8%E5%AF%B9%E5%A5%A2%E4%BE%88%E7%9A%84%E7%94%9F%E6%B4%BB/</link>
       <pubDate>Fri, 13 Feb 2015 23:12:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/2015/02/13/%E6%88%91%E7%9A%842014%E7%9B%B8%E5%AF%B9%E5%A5%A2%E4%BE%88%E7%9A%84%E7%94%9F%E6%B4%BB/</guid>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/02/%E6%88%91%E7%9A%842014%E7%9B%B8%E5%AF%B9%E5%A5%A2%E4%BE%88%E7%9A%84%E7%94%9F%E6%B4%BB/</guid>
       <description>
 
 &lt;p&gt;前往上海，离开医惠这个艰苦也收获颇多的公司，再一次告别和老婆分离一年的双城生活，过简单而珍贵的日子。选择在携程休整，总算是更专注于技术，任性地学习，显然是一种奢侈。&lt;/p&gt;
@@ -119,7 +298,7 @@
 
 &lt;h2 id=&#34;韧性:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;韧性&lt;/h2&gt;
 
-&lt;p&gt;工程师从不乏钻研的任性，却常常因为不舒服，个性，而简单的离开。比如，某天心血来潮在cnblogs写一篇技术文章，结果被退回首页，一想自己得整个博客，可细想的确自己写的不够好。点评一个面试官，问我c/c++,我说不懂，他便装懂Java，我操啊！尼玛请我多次才来的好么。That&amp;rsquo;s life，多一些韧性，才有更多的任性。&lt;/p&gt;
+&lt;p&gt;工程师从不乏钻研的韧性，却常常因为不舒服，个性，而简单的离开。比如，某天心血来潮在cnblogs写一篇技术文章，结果被退回首页，一想自己得整个博客，可细想的确自己写的不够好。点评一个面试官，问我c/c++,我说不懂，他便装懂Java，我操啊！尼玛请我多次才来的好么。That&amp;rsquo;s life，多一些韧性，才有更多的任性。&lt;/p&gt;
 
 &lt;h2 id=&#34;爱情:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;爱情&lt;/h2&gt;
 
@@ -128,11 +307,118 @@
     </item>
     
     <item>
+      <title>Page Object Pattern</title>
+      <link>http://cosyman.github.io/blog/2015/01/page-object-pattern/</link>
+      <pubDate>Thu, 29 Jan 2015 22:26:00 +0800</pubDate>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/01/page-object-pattern/</guid>
+      <description>
+
+&lt;p&gt;移动UI自动化，看起来美好，践行起来却难。做个目光短见的务实主义者。Page Objects Pattern是Selenium官方推崇的方式，最近研究写测试用例最佳实践之Page Objects，同时结合Appium的Java Client简单介绍下如何写出靠谱的Page Object。&lt;/p&gt;
+
+&lt;h2 id=&#34;page-objects&#34;&gt;Page Objects&lt;/h2&gt;
+
+&lt;p&gt;Page Object定义为抽象web app页面的一系列对象，通过对页面功能的封装，它得到了很多好处：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;减少重复代码&lt;/li&gt;
+&lt;li&gt;提高测试代码的可读性和稳定性&lt;/li&gt;
+&lt;li&gt;测试代码易于维护&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;一个简单的例子&#34;&gt;一个简单的例子&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class BaiduSearchPage {
+
+	protected WebDriver driver;
+  @FindBy(id=&amp;quot;kw&amp;quot;)
+	private WebElement kw;
+	private WebElement su;
+
+	public BaiduSearchPage(WebDriver driver) {
+		super();
+		this.driver = driver;
+    PageFactory.initElements(driver, this);
+	}
+	public void load(String url) {
+		driver.get(url);
+	}
+	public ResultPage search(String key) {
+		kw.clear();
+		kw.sendKeys(key);
+		su.click();
+		return new ResultPage(driver);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;推荐的做法&#34;&gt;推荐的做法&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;public 方法暴露Page对象的服务&lt;/li&gt;
+&lt;li&gt;WebElement,Driver相关页面UI细节尽可能隐藏&lt;/li&gt;
+&lt;li&gt;尽量减少Page对象中的Assertion&lt;/li&gt;
+&lt;li&gt;到达新的Page，在方法中返回其它Page,甚至同一页面也可以返回Page做链式操作&lt;/li&gt;
+&lt;li&gt;一个Page对象不需要关注所有细节，只关心需要的对象，需要时再补充&lt;/li&gt;
+&lt;li&gt;不同的结果，同一个操作可以用不同的方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;appium-中使用page-object-pattern&#34;&gt;Appium 中使用Page Object Pattern&lt;/h2&gt;
+
+&lt;p&gt;Appium的Java Client是基于WebDriver的，但有了一些改进。比如元素定位不到，Appium Java Client会将Locator详细信息抛出，而Selenium没有。&lt;/p&gt;
+
+&lt;h2 id=&#34;wait&#34;&gt;Wait&lt;/h2&gt;
+
+&lt;p&gt;移动自动化测试Wait是很关键的一个动作，既关乎正确性，也关乎效率，我们应该极力避免使用Thread.sleep()或Sleeper.sleepTight()。Appium的客户端提供了一个类AppiumFieldDecorator可以很方便的设置ImplicitlyWaitTimeOut。FieldDecorator顾名思义，是Page对象Field的Decorator，PageFactory主要就是在Feild上下功夫，将WebElement类型的Feild使用Proxy方法，创建一个增强的WebElement,这个成员在每次操作时，都会先使用注解的定位策略定位，然后再调用WebElement的方法，当然可以通过CacheLookup注解，来缓存定位结果（尽量不这么做)。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), pageObject);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果等待某个页面元素是否可见，在PageObject中也更简单&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public static void untilElementVisable(final WebElement element,int timeoutInSeconds){
+  new Wait() {
+     @Override
+     public boolean until() {
+	return element.isDisplayed();
+     }
+   }.wait(String.format(&amp;quot;Timed out waiting for %s. Waited %s&amp;quot;,
+		  element, timeoutInSeconds), timeoutInSeconds);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;findby&#34;&gt;FindBy&lt;/h2&gt;
+
+&lt;p&gt;在Appium中你会遇到，Selendroid模式和UIAutomator定位差异，比如Selendroid的linkText在UIAutomator中用name,还有就是iOS脚本想和Android共用一份。这在Appium中有了很好的扩充，Appium客户端会在运行时决定使用哪个Annotation来装饰WebElement。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@FindBy(name=&amp;quot;text&amp;quot;)
+@SelendroidFindBy(name = &amp;quot;text1&amp;quot;)
+@iOSFindBy(id=&amp;quot;sth&amp;quot;)
+private WebElement textSelendroid;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;elementinterceptor&#34;&gt;ElementInterceptor&lt;/h2&gt;
+
+&lt;p&gt;总是有这样或那样的原因，需要记录日志，如果方法的执行每一步都要手写是很痛苦的，自然我们想到了AOP。在Selenium中EventFiringWebDriver类可以方便的记录日志，但是在Appium客户端中，我们可以修改AppiumFieldDecorator中ElementInterceptor来加入自己的日志信息，不过暂时这个功能Appium Client没有暴露出来，需要自己fork个repo修改下。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://assertselenium.com/automation-design-practices/page-object-pattern/&#34;&gt;http://assertselenium.com/automation-design-practices/page-object-pattern/&lt;/a&gt;
+&lt;a href=&#34;https://code.google.com/p/selenium/wiki/LoadableComponent&#34;&gt;https://code.google.com/p/selenium/wiki/LoadableComponent&lt;/a&gt;
+&lt;a href=&#34;https://code.google.com/p/selenium/wiki/PageObjects&#34;&gt;https://code.google.com/p/selenium/wiki/PageObjects&lt;/a&gt;
+&lt;a href=&#34;https://code.google.com/p/selenium/wiki/PageFactory&#34;&gt;https://code.google.com/p/selenium/wiki/PageFactory&lt;/a&gt;
+&lt;a href=&#34;https://github.com/FluentLenium/FluentLenium&#34;&gt;https://github.com/FluentLenium/FluentLenium&lt;/a&gt;
+&lt;a href=&#34;https://github.com/countableSet/webdriver-demo&#34;&gt;https://github.com/countableSet/webdriver-demo&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>我的2013，豁然开朗</title>
-      <link>http://localhost:1313/blog/2014/03/26/%E6%88%91%E7%9A%842013%E8%B1%81%E7%84%B6%E5%BC%80%E6%9C%97/</link>
+      <link>http://cosyman.github.io/blog/2014/03/%E6%88%91%E7%9A%842013%E8%B1%81%E7%84%B6%E5%BC%80%E6%9C%97/</link>
       <pubDate>Wed, 26 Mar 2014 22:25:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/2014/03/26/%E6%88%91%E7%9A%842013%E8%B1%81%E7%84%B6%E5%BC%80%E6%9C%97/</guid>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2014/03/%E6%88%91%E7%9A%842013%E8%B1%81%E7%84%B6%E5%BC%80%E6%9C%97/</guid>
       <description>
 
 &lt;p&gt;相比10年做了传销后从身心财俱损中恢复，技术梦想的找回；11年外派淘宝自我归属的确立之艰辛；12年加入创业公司全身心牺牲后的失落；13年赢来了技术人生的首次豁然开朗。&lt;/p&gt;
@@ -170,10 +456,10 @@
     
     <item>
       <title>我的2012，务实</title>
-      <link>http://localhost:1313/blog/2013/05/16/%E6%88%91%E7%9A%842012%E5%8A%A1%E5%AE%9E/</link>
+      <link>http://cosyman.github.io/blog/2013/05/%E6%88%91%E7%9A%842012%E5%8A%A1%E5%AE%9E/</link>
       <pubDate>Thu, 16 May 2013 21:49:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/2013/05/16/%E6%88%91%E7%9A%842012%E5%8A%A1%E5%AE%9E/</guid>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2013/05/%E6%88%91%E7%9A%842012%E5%8A%A1%E5%AE%9E/</guid>
       <description>&lt;p&gt;总想着状况好一些的时候，再写这篇日志，或者年青时不能等这样的时光。写下了，继续前行吧&lt;/p&gt;
 
 &lt;p&gt;这一年曾及其的失落，或许是一种牺牲，但始终有些事情是快乐的。今年做到了用心对待身边的每个人。&lt;/p&gt;
@@ -202,10 +488,10 @@
     
     <item>
       <title>我的2011</title>
-      <link>http://localhost:1313/blog/2012/04/12/%E6%88%91%E7%9A%842011/</link>
+      <link>http://cosyman.github.io/blog/2012/04/%E6%88%91%E7%9A%842011/</link>
       <pubDate>Thu, 12 Apr 2012 00:00:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/2012/04/12/%E6%88%91%E7%9A%842011/</guid>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2012/04/%E6%88%91%E7%9A%842011/</guid>
       <description>&lt;p&gt;离职的感觉真好，这几天才感受到除了工作，还有生活。早上4点多醒了，看着女友熟睡的样子，想你这一年辛苦了，今天就恋爱3周年了，感谢有你相伴。&lt;/p&gt;
 
 &lt;p&gt;三年前的今天，我们第一次约会，不知说什么就呆在一起11个多小时，第二次约会，在人民广场忘情地热吻，被旁边的小孩骂&amp;hellip;&amp;hellip; 爱情总是以激情开始，平淡结束；在追逐时浪漫，坚守时温情。这一年工作很忙，偶尔的停顿，想你时心里是微笑。这一年我们看了很多影视剧，《北爱》里更多是友情，对信仰的坚定；《婚姻保卫战》,《浪漫向左,婚姻向右》或许是爱情最真实的部分；《那些年，我们一起追女孩》唤起对中学时代的回忆，女孩已失去联系，如今珍惜当下；《龙门飞甲》让我体会什么是牵挂；《晚秋》中安娜与勋看的那段话剧，我被吸引了，不知道你什么感觉&amp;hellip;&amp;hellip;&lt;/p&gt;
@@ -218,10 +504,10 @@
     
     <item>
       <title>我的2010</title>
-      <link>http://localhost:1313/blog/2010/07/03/%E6%88%91%E7%9A%842010/</link>
+      <link>http://cosyman.github.io/blog/2010/07/%E6%88%91%E7%9A%842010/</link>
       <pubDate>Sat, 03 Jul 2010 00:00:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/2010/07/03/%E6%88%91%E7%9A%842010/</guid>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2010/07/%E6%88%91%E7%9A%842010/</guid>
       <description>&lt;p&gt;毫无疑问，2010是我悲惨的一年，命运也随之改变，至少是临时的走向低谷，错过梦想。&lt;/p&gt;
 
 &lt;p&gt;生活的拮据，满足于三天内有饭吃，精神的拮据，只有努力的工作，束缚于电脑旁，尽管我喜欢这样做。这样的生活已经一年了，还好我坚持了下来。&lt;/p&gt;

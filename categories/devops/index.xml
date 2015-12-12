@@ -1,25 +1,131 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Devops on 技术&amp;生活</title>
+    <title>Devops on 兰天</title>
     <link>http://cosyman.github.io/categories/devops/</link>
-    <description>Recent content in Devops on 技术&amp;生活</description>
+    <description>Recent content in Devops on 兰天</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 29 Jan 2015 22:26:00 +0800</lastBuildDate>
+    <language>zh-cn</language>
+    <managingEditor>cosman@outlook.com (兰天)</managingEditor>
+    <webMaster>cosman@outlook.com (兰天)</webMaster>
+    <lastBuildDate>Sat, 09 May 2015 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://cosyman.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Build系统介绍</title>
+      <link>http://cosyman.github.io/blog/2015/05/build%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Sat, 09 May 2015 00:00:00 +0800</pubDate>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/05/build%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;好的IDE做Build工具的Wrapper，Build平台也应只做Build工具的Wrapper，大量散乱的Build脚步应被组织起来，演变为Build工具&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;10000公里俯瞰build:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;10000公里俯瞰Build&lt;/h2&gt;
+
+&lt;p&gt;Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。而Build平台可以最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发)吧，只有他们有责任和欲望演进构建的脚步，我们应致力于Build平台体验和好的构建根据的引入与研发。&lt;/p&gt;
+
+&lt;p&gt;现代Build系统,构建分享的舞台，中转站，生产与消费，依赖关系图，有向无环Task图。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/cosyman/cosyman-hugo/master/static/images/devops/deg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;scm:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;SCM&lt;/h2&gt;
+
+&lt;h2 id=&#34;configuration-manager-system:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Configuration Manager System&lt;/h2&gt;
+
+&lt;p&gt;虽然仅仅是flavor，可用抽象为独立的服务，并且最好抽象为独立的服务&lt;/p&gt;
+
+&lt;h2 id=&#34;profile:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Profile&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;平台的独立性
+2.不同的调料,当发现api传递很多参赛时，应该考虑这些参数是否需要暴露，是否是开放决定的，然后分组，暴露profile&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;script-dsl:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Script/DSL&lt;/h2&gt;
+
+&lt;h2 id=&#34;repository:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Repository&lt;/h2&gt;
+
+&lt;p&gt;提供了消费者提供者的舞台，内部繁荣。利于模块化的实践，在facebook专门开发工具，鼓励代码小模块的实践，加速构建速度。&lt;/p&gt;
+
+&lt;p&gt;中心化，所有被依赖的产出注册&lt;/p&gt;
+
+&lt;p&gt;结合git的tag管理，充分利用scm和代码密切联系，减少二次存放&lt;/p&gt;
+
+&lt;p&gt;本地缓存，局域网代理，缓存，高可用。&lt;/p&gt;
+
+&lt;h2 id=&#34;artifact:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Artifact&lt;/h2&gt;
+
+&lt;h3 id=&#34;version:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Version&lt;/h3&gt;
+
+&lt;p&gt;具体参考sem。通常为了开发方便，可以设置一种time changing 版本，每次构建都会获取最新的版本，显然它应该限制在生产环境，在maven中体现为Snapshot机制&lt;/p&gt;
+
+&lt;p&gt;版本应该直接体现在构建的文件名字当中，避免不必要的错误。&lt;/p&gt;
+
+&lt;h3 id=&#34;依赖:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;依赖&lt;/h3&gt;
+
+&lt;p&gt;大型的互联网的系统，依赖图也将非常复杂，它至少支持，依赖传递与中断或排除，以及版本冲突的选择策略定制。当然比如在Java中，可以通过ClassLoader的定义，避免版本冲突，尤其在Java9中有了更好的支持&lt;/p&gt;
+
+&lt;h2 id=&#34;lifecycle:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Lifecycle&lt;/h2&gt;
+
+&lt;p&gt;生命周期的定义，意味着某种构建的抽象可能性，尤其对于DotNet，Java等平台，甚至每种构建都本身是一种标准，比如Java中war，ear等，它可以帮助吧约定胜于配置的理念发挥到极致，同时Lifecycle也通常意味着不变，对于灵活性&lt;/p&gt;
+
+&lt;h2 id=&#34;task-graph-goal:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Task Graph/Goal&lt;/h2&gt;
+
+&lt;p&gt;同样对于Task也应是一种有向无环图，这在Gradle Gulp等工具中显得特别重要&lt;/p&gt;
+
+&lt;h2 id=&#34;best-practices:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Best Practices&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Build Script 由开发维护，作为代码的一部分&lt;/li&gt;
+&lt;li&gt;一致性，本地，server端。&lt;/li&gt;
+&lt;li&gt;关注点分离，self-contained的完整的输入输出及处理周期。&lt;/li&gt;
+&lt;li&gt;根本上关注构建体验，分而治之。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;cbuilder-s-anti-pattern:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Cbuilder&amp;rsquo;s Anti Pattern&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;SCM项目源码依赖&amp;ndash;&amp;gt;SCM目录依赖&amp;ndash;&amp;gt;SCM文件依赖 中间仓库，源码以来意味着依赖的交付为源码，JDK的开发中比如jshell，http2&lt;/li&gt;
+&lt;li&gt;BuildScript过重，没有转给开发，Build Engineer的出现&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;develop-build-tool:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Develop Build Tool&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Build 是严肃的，稳定&lt;/li&gt;
+&lt;li&gt;Build 应该被合理的组织&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;references:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&#34;&gt;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.virginia.edu/~dww4s/articles/build_systems.html&#34;&gt;Overview of  Build&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.open-open.com/doc/view/4058453cde4b429c82ff2807d8aa81f0&#34;&gt;淘宝Maven培训&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://devops.com/2014/07/29/continuous-delivery-pipeline/&#34;&gt;http://devops.com/2014/07/29/continuous-delivery-pipeline/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://semver.org&#34;&gt;版本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.infoq.com/presentations/cd-gradle-jenkins&#34;&gt;http://www.infoq.com/presentations/cd-gradle-jenkins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.nuget.org/20150729/Introducing-nuget-uwp.html&#34;&gt;NuGet Package Name&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dzone.com/refcardz/designing-quality-software&#34;&gt;Dependency Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dzone.com/refcardz/getting-started-repository&#34;&gt;Repository Management&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Page Object Pattern</title>
-      <link>http://cosyman.github.io/blog/2015/01/29/page-object-pattern/</link>
+      <link>http://cosyman.github.io/blog/2015/01/page-object-pattern/</link>
       <pubDate>Thu, 29 Jan 2015 22:26:00 +0800</pubDate>
-      
-      <guid>http://cosyman.github.io/blog/2015/01/29/page-object-pattern/</guid>
+      <author>cosman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/01/page-object-pattern/</guid>
       <description>
 
 &lt;p&gt;移动UI自动化，看起来美好，践行起来却难。做个目光短见的务实主义者。Page Objects Pattern是Selenium官方推崇的方式，最近研究写测试用例最佳实践之Page Objects，同时结合Appium的Java Client简单介绍下如何写出靠谱的Page Object。&lt;/p&gt;
 
-&lt;h2 id=&#34;page-objects:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Page Objects&lt;/h2&gt;
+&lt;h2 id=&#34;page-objects&#34;&gt;Page Objects&lt;/h2&gt;
 
 &lt;p&gt;Page Object定义为抽象web app页面的一系列对象，通过对页面功能的封装，它得到了很多好处：&lt;/p&gt;
 
@@ -29,7 +135,7 @@
 &lt;li&gt;测试代码易于维护&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;一个简单的例子:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;一个简单的例子&lt;/h2&gt;
+&lt;h2 id=&#34;一个简单的例子&#34;&gt;一个简单的例子&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class BaiduSearchPage {
 
@@ -55,7 +161,7 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;推荐的做法:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;推荐的做法&lt;/h2&gt;
+&lt;h2 id=&#34;推荐的做法&#34;&gt;推荐的做法&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;public 方法暴露Page对象的服务&lt;/li&gt;
@@ -66,11 +172,11 @@
 &lt;li&gt;不同的结果，同一个操作可以用不同的方法。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;appium-中使用page-object-pattern:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Appium 中使用Page Object Pattern&lt;/h2&gt;
+&lt;h2 id=&#34;appium-中使用page-object-pattern&#34;&gt;Appium 中使用Page Object Pattern&lt;/h2&gt;
 
 &lt;p&gt;Appium的Java Client是基于WebDriver的，但有了一些改进。比如元素定位不到，Appium Java Client会将Locator详细信息抛出，而Selenium没有。&lt;/p&gt;
 
-&lt;h2 id=&#34;wait:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Wait&lt;/h2&gt;
+&lt;h2 id=&#34;wait&#34;&gt;Wait&lt;/h2&gt;
 
 &lt;p&gt;移动自动化测试Wait是很关键的一个动作，既关乎正确性，也关乎效率，我们应该极力避免使用Thread.sleep()或Sleeper.sleepTight()。Appium的客户端提供了一个类AppiumFieldDecorator可以很方便的设置ImplicitlyWaitTimeOut。FieldDecorator顾名思义，是Page对象Field的Decorator，PageFactory主要就是在Feild上下功夫，将WebElement类型的Feild使用Proxy方法，创建一个增强的WebElement,这个成员在每次操作时，都会先使用注解的定位策略定位，然后再调用WebElement的方法，当然可以通过CacheLookup注解，来缓存定位结果（尽量不这么做)。&lt;/p&gt;
 
@@ -91,7 +197,7 @@
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;findby:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;FindBy&lt;/h2&gt;
+&lt;h2 id=&#34;findby&#34;&gt;FindBy&lt;/h2&gt;
 
 &lt;p&gt;在Appium中你会遇到，Selendroid模式和UIAutomator定位差异，比如Selendroid的linkText在UIAutomator中用name,还有就是iOS脚本想和Android共用一份。这在Appium中有了很好的扩充，Appium客户端会在运行时决定使用哪个Annotation来装饰WebElement。&lt;/p&gt;
 
@@ -101,11 +207,11 @@
 private WebElement textSelendroid;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;elementinterceptor:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;ElementInterceptor&lt;/h2&gt;
+&lt;h2 id=&#34;elementinterceptor&#34;&gt;ElementInterceptor&lt;/h2&gt;
 
 &lt;p&gt;总是有这样或那样的原因，需要记录日志，如果方法的执行每一步都要手写是很痛苦的，自然我们想到了AOP。在Selenium中EventFiringWebDriver类可以方便的记录日志，但是在Appium客户端中，我们可以修改AppiumFieldDecorator中ElementInterceptor来加入自己的日志信息，不过暂时这个功能Appium Client没有暴露出来，需要自己fork个repo修改下。&lt;/p&gt;
 
-&lt;h2 id=&#34;参考:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://assertselenium.com/automation-design-practices/page-object-pattern/&#34;&gt;http://assertselenium.com/automation-design-practices/page-object-pattern/&lt;/a&gt;
 &lt;a href=&#34;https://code.google.com/p/selenium/wiki/LoadableComponent&#34;&gt;https://code.google.com/p/selenium/wiki/LoadableComponent&lt;/a&gt;
