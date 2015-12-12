@@ -29,7 +29,7 @@
 
 &lt;p&gt;当然还是表达了一些Java社区和开源生态的文化，我想对于dotnet开发人员比较重要吧，最后一个同学 问问题Maven如何做模块化和分层划分，这个问题我是思考实践很久了的，模块优于分层，具体问题模块 也可以只用package区分。当时比较懵，后面一句没加。&lt;/p&gt;
 
-&lt;h2 id=&#34;教训:cb45cef30d12b540852560d925887cef&#34;&gt;教训&lt;/h2&gt;
+&lt;h2 id=&#34;教训&#34;&gt;教训&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;充分的准备，并不是对领域足够了解，有很深刻的认识就够了。还要把知识找到载体，有效的传达，比如如何让keynote做的更形象生动，有乐趣而直观的让听众接受&lt;/li&gt;
@@ -53,29 +53,29 @@
 
 &lt;p&gt;老婆是做猎头的，也算是比较优秀的猎头了，他能赢得优秀工程师的信任，包括很多个性奇特的工程师，并且能尽力维护候选人的利益。怀孕后，老婆公司找了些case以重大经济损失和严重违反公司规章制度为由开除了老婆，于是便开始了我们的劳动争议。其实遇到这种事情，就是倒大霉了，不管能不能赢得诉求,你都会损失，各种压力，时间，精力上的浪费，还有断了社保后的问题。&lt;/p&gt;
 
-&lt;h2 id=&#34;流程:71d6126b64392bed63537027d7597d6d&#34;&gt;流程&lt;/h2&gt;
+&lt;h2 id=&#34;流程&#34;&gt;流程&lt;/h2&gt;
 
 &lt;p&gt;犯了一个错误就是，劳动争议的开始仲裁员会让申诉人陈述诉求，这个时候一定要说完，我老婆在快结束时，才提其它几个诉求，显然驳回了。即便重要的诉求，只怪自己没有提前学习下流程，主要也就注意这点。&lt;/p&gt;
 
-&lt;h2 id=&#34;事实:71d6126b64392bed63537027d7597d6d&#34;&gt;事实&lt;/h2&gt;
+&lt;h2 id=&#34;事实&#34;&gt;事实&lt;/h2&gt;
 
 &lt;p&gt;法律讲的是事实，自然事实与法律事实。老婆总是想当然，以为太明显的事情，然要用事实说话。&lt;/p&gt;
 
-&lt;h2 id=&#34;准备:71d6126b64392bed63537027d7597d6d&#34;&gt;准备&lt;/h2&gt;
+&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
 
 &lt;p&gt;每个诉求，理由，证据都要准备好（公司有责任提供更多的证据），最好法律法规也都清楚，能找到个律师朋友相助当然是最好了。其实准备的过程中也是学习最多阶段。&lt;/p&gt;
 
-&lt;h2 id=&#34;公正:71d6126b64392bed63537027d7597d6d&#34;&gt;公正&lt;/h2&gt;
+&lt;h2 id=&#34;公正&#34;&gt;公正&lt;/h2&gt;
 
 &lt;p&gt;公正是难的，仲裁员是要理智的，即使面对台下各种耍小聪明，营私舞弊之人，也不能脱口大骂，要忍住然后千思万绪的理清，为受害人争取最大利益。&lt;/p&gt;
 
 &lt;p&gt;公正，真的有公正吗？这个社会你自然可以相信公正，毕竟大部分人在往幸福的路上，也渴望公正，但做到公正是难的，靠制度，靠执行，更要靠自己的能力去努力争取。&lt;/p&gt;
 
-&lt;h2 id=&#34;舆论:71d6126b64392bed63537027d7597d6d&#34;&gt;舆论&lt;/h2&gt;
+&lt;h2 id=&#34;舆论&#34;&gt;舆论&lt;/h2&gt;
 
 &lt;p&gt;很多时候，如果法律都解决不了的事情，我们会诉诸于舆论。事发后，有个猎头圈比较有影响的人要为老婆声援，还好被老婆拒绝了，还有一些腾讯等工程师然而我们最终没有采用舆论方式，害怕它的毁灭性会太大，老婆公司毕竟是一家小公司。如若是BAT这样的公司，做这种不光彩的事情，我想我们应该舆论，然而舆论并不能伤害到他们什么&lt;/p&gt;
 
-&lt;h2 id=&#34;幸运:71d6126b64392bed63537027d7597d6d&#34;&gt;幸运&lt;/h2&gt;
+&lt;h2 id=&#34;幸运&#34;&gt;幸运&lt;/h2&gt;
 
 &lt;p&gt;前段时间，我们阴差阳错的没有买到房子真是幸运，否则老婆失业，我们家已然要破产了。&lt;/p&gt;
 
@@ -95,7 +95,7 @@
 &lt;p&gt;好的IDE做Build工具的Wrapper，Build平台也应只做Build工具的Wrapper，大量散乱的Build脚步应被组织起来，演变为Build工具&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;10000公里俯瞰build:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;10000公里俯瞰Build&lt;/h2&gt;
+&lt;h2 id=&#34;10000公里俯瞰build&#34;&gt;10000公里俯瞰Build&lt;/h2&gt;
 
 &lt;p&gt;Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。而Build平台可以最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发)吧，只有他们有责任和欲望演进构建的脚步，我们应致力于Build平台体验和好的构建根据的引入与研发。&lt;/p&gt;
 
@@ -103,22 +103,22 @@
 
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/cosyman/cosyman-hugo/master/static/images/devops/deg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;scm:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;SCM&lt;/h2&gt;
+&lt;h2 id=&#34;scm&#34;&gt;SCM&lt;/h2&gt;
 
-&lt;h2 id=&#34;configuration-manager-system:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Configuration Manager System&lt;/h2&gt;
+&lt;h2 id=&#34;configuration-manager-system&#34;&gt;Configuration Manager System&lt;/h2&gt;
 
 &lt;p&gt;虽然仅仅是flavor，可用抽象为独立的服务，并且最好抽象为独立的服务&lt;/p&gt;
 
-&lt;h2 id=&#34;profile:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Profile&lt;/h2&gt;
+&lt;h2 id=&#34;profile&#34;&gt;Profile&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;平台的独立性
 2.不同的调料,当发现api传递很多参赛时，应该考虑这些参数是否需要暴露，是否是开放决定的，然后分组，暴露profile&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;script-dsl:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Script/DSL&lt;/h2&gt;
+&lt;h2 id=&#34;script-dsl&#34;&gt;Script/DSL&lt;/h2&gt;
 
-&lt;h2 id=&#34;repository:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Repository&lt;/h2&gt;
+&lt;h2 id=&#34;repository&#34;&gt;Repository&lt;/h2&gt;
 
 &lt;p&gt;提供了消费者提供者的舞台，内部繁荣。利于模块化的实践，在facebook专门开发工具，鼓励代码小模块的实践，加速构建速度。&lt;/p&gt;
 
@@ -128,27 +128,27 @@
 
 &lt;p&gt;本地缓存，局域网代理，缓存，高可用。&lt;/p&gt;
 
-&lt;h2 id=&#34;artifact:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Artifact&lt;/h2&gt;
+&lt;h2 id=&#34;artifact&#34;&gt;Artifact&lt;/h2&gt;
 
-&lt;h3 id=&#34;version:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Version&lt;/h3&gt;
+&lt;h3 id=&#34;version&#34;&gt;Version&lt;/h3&gt;
 
 &lt;p&gt;具体参考sem。通常为了开发方便，可以设置一种time changing 版本，每次构建都会获取最新的版本，显然它应该限制在生产环境，在maven中体现为Snapshot机制&lt;/p&gt;
 
 &lt;p&gt;版本应该直接体现在构建的文件名字当中，避免不必要的错误。&lt;/p&gt;
 
-&lt;h3 id=&#34;依赖:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;依赖&lt;/h3&gt;
+&lt;h3 id=&#34;依赖&#34;&gt;依赖&lt;/h3&gt;
 
 &lt;p&gt;大型的互联网的系统，依赖图也将非常复杂，它至少支持，依赖传递与中断或排除，以及版本冲突的选择策略定制。当然比如在Java中，可以通过ClassLoader的定义，避免版本冲突，尤其在Java9中有了更好的支持&lt;/p&gt;
 
-&lt;h2 id=&#34;lifecycle:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Lifecycle&lt;/h2&gt;
+&lt;h2 id=&#34;lifecycle&#34;&gt;Lifecycle&lt;/h2&gt;
 
 &lt;p&gt;生命周期的定义，意味着某种构建的抽象可能性，尤其对于DotNet，Java等平台，甚至每种构建都本身是一种标准，比如Java中war，ear等，它可以帮助吧约定胜于配置的理念发挥到极致，同时Lifecycle也通常意味着不变，对于灵活性&lt;/p&gt;
 
-&lt;h2 id=&#34;task-graph-goal:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Task Graph/Goal&lt;/h2&gt;
+&lt;h2 id=&#34;task-graph-goal&#34;&gt;Task Graph/Goal&lt;/h2&gt;
 
 &lt;p&gt;同样对于Task也应是一种有向无环图，这在Gradle Gulp等工具中显得特别重要&lt;/p&gt;
 
-&lt;h2 id=&#34;best-practices:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Best Practices&lt;/h2&gt;
+&lt;h2 id=&#34;best-practices&#34;&gt;Best Practices&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Build Script 由开发维护，作为代码的一部分&lt;/li&gt;
@@ -157,21 +157,21 @@
 &lt;li&gt;根本上关注构建体验，分而治之。&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;cbuilder-s-anti-pattern:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Cbuilder&amp;rsquo;s Anti Pattern&lt;/h2&gt;
+&lt;h2 id=&#34;cbuilder-s-anti-pattern&#34;&gt;Cbuilder&amp;rsquo;s Anti Pattern&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;SCM项目源码依赖&amp;ndash;&amp;gt;SCM目录依赖&amp;ndash;&amp;gt;SCM文件依赖 中间仓库，源码以来意味着依赖的交付为源码，JDK的开发中比如jshell，http2&lt;/li&gt;
 &lt;li&gt;BuildScript过重，没有转给开发，Build Engineer的出现&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;develop-build-tool:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Develop Build Tool&lt;/h2&gt;
+&lt;h2 id=&#34;develop-build-tool&#34;&gt;Develop Build Tool&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Build 是严肃的，稳定&lt;/li&gt;
 &lt;li&gt;Build 应该被合理的组织&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;references:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&#34;&gt;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&lt;/a&gt;&lt;/li&gt;
@@ -275,32 +275,32 @@
 
 &lt;p&gt;前往上海，离开医惠这个艰苦也收获颇多的公司，再一次告别和老婆分离一年的双城生活，过简单而珍贵的日子。选择在携程休整，总算是更专注于技术，任性地学习，显然是一种奢侈。&lt;/p&gt;
 
-&lt;h2 id=&#34;裸辞:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;裸辞&lt;/h2&gt;
+&lt;h2 id=&#34;裸辞&#34;&gt;裸辞&lt;/h2&gt;
 
 &lt;p&gt;如果是正确的选择，就不要遵守太多规则。一个半月的时间，面了20多家公司，各种心情起伏，本身也是一种收获。接触不同的人，被鄙视，忽视，不公平，尊重，敬佩。若有容纳之心，便丰富了自己，也闪了他人，平常心，平常事。&lt;/p&gt;
 
-&lt;h2 id=&#34;快乐的能力:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;快乐的能力&lt;/h2&gt;
+&lt;h2 id=&#34;快乐的能力&#34;&gt;快乐的能力&lt;/h2&gt;
 
 &lt;p&gt;阅读，是保持时尚最节约的方式，也是快乐的源泉。可人生难免失意，有了快乐的能力，还应有面对沮丧的心胸。相比以往，重大难过不会持续2天。不以物喜，不以己悲说的不是境界，而在于被各种恶心之后，快速的恢复，享受生命的美好。&lt;/p&gt;
 
-&lt;h2 id=&#34;表达:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;表达&lt;/h2&gt;
+&lt;h2 id=&#34;表达&#34;&gt;表达&lt;/h2&gt;
 
 &lt;p&gt;庄子的冷眼看世界，热心肠。而若入世，心肠热，还要表达出来。一直觉得自己够真够实，不屑言表，可表达并没那么容易。这些时间开始喜欢上Markdown，表达先从文字开始。&lt;/p&gt;
 
-&lt;h2 id=&#34;化繁为简的欲望:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;化繁为简的欲望&lt;/h2&gt;
+&lt;h2 id=&#34;化繁为简的欲望&#34;&gt;化繁为简的欲望&lt;/h2&gt;
 
 &lt;p&gt;老大总说事情很简单，新人也说复杂必死。Simple is not Easy,探寻事物的边界与本质，上下而求索，终不得满足。生也有涯，知也无涯。&lt;/p&gt;
 
-&lt;h2 id=&#34;错过某班车:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;错过某班车&lt;/h2&gt;
+&lt;h2 id=&#34;错过某班车&#34;&gt;错过某班车&lt;/h2&gt;
 
 &lt;p&gt;不管多么努力地奔跑，总会错过某班车。同行路上，或P67、56T、T3X，或后继有人，或已走向人生巅峰&amp;hellip;难免尴尬:disappointed:。也正因为在低处，不敢懈怠，谁又能阻止
 &lt;a href=&#34;http://book.douban.com/subject/1947735/&#34;&gt;The Pursuit of Happyness&lt;/a&gt;。携爱的人一起，乐在路上。&lt;/p&gt;
 
-&lt;h2 id=&#34;韧性:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;韧性&lt;/h2&gt;
+&lt;h2 id=&#34;韧性&#34;&gt;韧性&lt;/h2&gt;
 
 &lt;p&gt;工程师从不乏钻研的韧性，却常常因为不舒服，个性，而简单的离开。比如，某天心血来潮在cnblogs写一篇技术文章，结果被退回首页，一想自己得整个博客，可细想的确自己写的不够好。点评一个面试官，问我c/c++,我说不懂，他便装懂Java，我操啊！尼玛请我多次才来的好么。That&amp;rsquo;s life，多一些韧性，才有更多的任性。&lt;/p&gt;
 
-&lt;h2 id=&#34;爱情:a80d52790e9ac7466b9d86b938ab0d63&#34;&gt;爱情&lt;/h2&gt;
+&lt;h2 id=&#34;爱情&#34;&gt;爱情&lt;/h2&gt;
 
 &lt;p&gt;恋爱6年，终于14年结婚。坦然的享受生活，实事求是的任性，是因你的宽容。我们一起应对现实，心向光明。何景何境，都因你在，而变得美好！&lt;/p&gt;
 </description>
@@ -314,24 +314,25 @@
       <guid>http://cosyman.github.io/blog/2015/01/page-object-pattern/</guid>
       <description>
 
-&lt;p&gt;移动UI自动化，看起来美好，践行起来却难。做个目光短见的务实主义者。Page Objects Pattern是Selenium官方推崇的方式，最近研究写测试用例最佳实践之Page Objects，同时结合Appium的Java Client简单介绍下如何写出靠谱的Page Object。&lt;/p&gt;
+&lt;p&gt;移动UI自动化，看起来美好，践行起来却难。做个目光短见的实主义者。Page Objects Pattern是Selenium官方推崇的方式，最近研究写测试用例最佳实践之Page Objects，同时结合Appium的Java Client简单介绍下如何写出靠谱的Page Object。&lt;/p&gt;
 
-&lt;h2 id=&#34;page-objects&#34;&gt;Page Objects&lt;/h2&gt;
+&lt;h2 id=&#34;page-objects:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Page Objects&lt;/h2&gt;
 
-&lt;p&gt;Page Object定义为抽象web app页面的一系列对象，通过对页面功能的封装，它得到了很多好处：&lt;/p&gt;
+&lt;p&gt;Page Object定义为抽象web app页面的一系列对象，通过对UI界面的抽象，它拥有很多好处：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;减少重复代码&lt;/li&gt;
 &lt;li&gt;提高测试代码的可读性和稳定性&lt;/li&gt;
 &lt;li&gt;测试代码易于维护&lt;/li&gt;
+&lt;li&gt;UI元素的定位和具体实现分离，如Android，iOS的一套脚本实现&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;一个简单的例子&#34;&gt;一个简单的例子&lt;/h2&gt;
+&lt;h2 id=&#34;一个简单的例子:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;一个简单的例子&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class BaiduSearchPage {
 
 	protected WebDriver driver;
-  @FindBy(id=&amp;quot;kw&amp;quot;)
+	@FindBy(id=&amp;quot;kw&amp;quot;)
 	private WebElement kw;
 	private WebElement su;
 
@@ -352,24 +353,24 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;推荐的做法&#34;&gt;推荐的做法&lt;/h2&gt;
+&lt;h2 id=&#34;推荐的做法:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;推荐的做法&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;public 方法暴露Page对象的服务&lt;/li&gt;
+&lt;li&gt;public方法暴露Page对象的服务&lt;/li&gt;
 &lt;li&gt;WebElement,Driver相关页面UI细节尽可能隐藏&lt;/li&gt;
 &lt;li&gt;尽量减少Page对象中的Assertion&lt;/li&gt;
-&lt;li&gt;到达新的Page，在方法中返回其它Page,甚至同一页面也可以返回Page做链式操作&lt;/li&gt;
-&lt;li&gt;一个Page对象不需要关注所有细节，只关心需要的对象，需要时再补充&lt;/li&gt;
+&lt;li&gt;在方法中返回新的Page,甚至在同一页面也可以返回Page做链式操作&lt;/li&gt;
+&lt;li&gt;一个Page对象不需要关注所有细节，只关心需要的UI元素，需要时再补充&lt;/li&gt;
 &lt;li&gt;不同的结果，同一个操作可以用不同的方法。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;appium-中使用page-object-pattern&#34;&gt;Appium 中使用Page Object Pattern&lt;/h2&gt;
+&lt;h2 id=&#34;appium-中使用page-object-pattern:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Appium 中使用Page Object Pattern&lt;/h2&gt;
 
-&lt;p&gt;Appium的Java Client是基于WebDriver的，但有了一些改进。比如元素定位不到，Appium Java Client会将Locator详细信息抛出，而Selenium没有。&lt;/p&gt;
+&lt;p&gt;Appium的Java Client是基于WebDriver的，但有了一些改进。比如元素定位不到时，它会将Locator详细信息抛出，而Selenium没有。&lt;/p&gt;
 
-&lt;h2 id=&#34;wait&#34;&gt;Wait&lt;/h2&gt;
+&lt;h2 id=&#34;wait:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Wait&lt;/h2&gt;
 
-&lt;p&gt;移动自动化测试Wait是很关键的一个动作，既关乎正确性，也关乎效率，我们应该极力避免使用Thread.sleep()或Sleeper.sleepTight()。Appium的客户端提供了一个类AppiumFieldDecorator可以很方便的设置ImplicitlyWaitTimeOut。FieldDecorator顾名思义，是Page对象Field的Decorator，PageFactory主要就是在Feild上下功夫，将WebElement类型的Feild使用Proxy方法，创建一个增强的WebElement,这个成员在每次操作时，都会先使用注解的定位策略定位，然后再调用WebElement的方法，当然可以通过CacheLookup注解，来缓存定位结果（尽量不这么做)。&lt;/p&gt;
+&lt;p&gt;移动自动化测试Wait是很关键的一个动作，既关乎正确性，也关乎效率，我们应该极力避免使用Thread.sleep()或Sleeper.sleepTight()。Appium的客户端提供了一个类AppiumFieldDecorator可以很方便的设置ImplicitlyWaitTimeOut。FieldDecorator顾名思义，是Page对象Field的Decorator，PageObject的精髓就是在Feild上下功夫，将WebElement类型的Feild动态Proxy为一个增强的WebElement,这个成员在每次操作时，都会先使用注解的定位策略定位，然后再调用WebElement的方法，当然可以通过CacheLookup注解，来缓存定位结果。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), pageObject);
 &lt;/code&gt;&lt;/pre&gt;
@@ -380,7 +381,7 @@
   new Wait() {
      @Override
      public boolean until() {
-	return element.isDisplayed();
+		return element.isDisplayed();
      }
    }.wait(String.format(&amp;quot;Timed out waiting for %s. Waited %s&amp;quot;,
 		  element, timeoutInSeconds), timeoutInSeconds);
@@ -388,7 +389,7 @@
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;findby&#34;&gt;FindBy&lt;/h2&gt;
+&lt;h2 id=&#34;findby:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;FindBy&lt;/h2&gt;
 
 &lt;p&gt;在Appium中你会遇到，Selendroid模式和UIAutomator定位差异，比如Selendroid的linkText在UIAutomator中用name,还有就是iOS脚本想和Android共用一份。这在Appium中有了很好的扩充，Appium客户端会在运行时决定使用哪个Annotation来装饰WebElement。&lt;/p&gt;
 
@@ -398,11 +399,11 @@
 private WebElement textSelendroid;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;elementinterceptor&#34;&gt;ElementInterceptor&lt;/h2&gt;
+&lt;h2 id=&#34;elementinterceptor:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;ElementInterceptor&lt;/h2&gt;
 
 &lt;p&gt;总是有这样或那样的原因，需要记录日志，如果方法的执行每一步都要手写是很痛苦的，自然我们想到了AOP。在Selenium中EventFiringWebDriver类可以方便的记录日志，但是在Appium客户端中，我们可以修改AppiumFieldDecorator中ElementInterceptor来加入自己的日志信息，不过暂时这个功能Appium Client没有暴露出来，需要自己fork个repo修改下。&lt;/p&gt;
 
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;参考&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://assertselenium.com/automation-design-practices/page-object-pattern/&#34;&gt;http://assertselenium.com/automation-design-practices/page-object-pattern/&lt;/a&gt;
 &lt;a href=&#34;https://code.google.com/p/selenium/wiki/LoadableComponent&#34;&gt;https://code.google.com/p/selenium/wiki/LoadableComponent&lt;/a&gt;
@@ -425,26 +426,26 @@ private WebElement textSelendroid;
 
 &lt;p&gt;本以为把最后一个难题解决了，我是一名拥有科学精神的工程师了，然后去寻找让自己激情澎湃的事情。在小公司写代码通常在最底层，有种”公司兴，工程师苦”的悲凉。经历黑暗方可塑造灵魂，13年的上下而求索，让我感受到技术生涯的首次豁然开朗。这种豁然不能化解悲凉，却已然让自己变得坚定，坦然，离自由近了一些。&lt;/p&gt;
 
-&lt;h2 id=&#34;关于工作:482e53c11729bf35c99d434275943755&#34;&gt;关于工作&lt;/h2&gt;
+&lt;h2 id=&#34;关于工作&#34;&gt;关于工作&lt;/h2&gt;
 
 &lt;p&gt;今年的工作量依然很重，同时又mentor了五六个新人，用心做，则心苦，但终有所获。最安慰的是我带过的人会更靠谱。能把自己所学毫无保留的分享是乐趣。带人其实也在历练自己：打开心；热爱；深度研究的习惯；广度探索的好奇心；团队协作；务实并敏捷起来；融汇贯通之后的创造；具备技术人的情怀。贵在身体力行，也正因努力践行，才知道自己的不足，于是永无止境。&lt;/p&gt;
 
-&lt;h2 id=&#34;关于爱情:482e53c11729bf35c99d434275943755&#34;&gt;关于爱情&lt;/h2&gt;
+&lt;h2 id=&#34;关于爱情&#34;&gt;关于爱情&lt;/h2&gt;
 
 &lt;p&gt;今年又一次和女友分隔两城，各种揪心、担心与想念。好在她找到自己热爱的工作，实现自我的同时，感受帮助他人的成就感。在毕业两年之后到全新领域做自己喜欢的事情，这勇敢值得我学习。
 一直想写一篇关于爱情的日志，准备了近两年，还是无法提笔，或者这样的日志是要两个人写的，爱，就在一起。&lt;/p&gt;
 
-&lt;h2 id=&#34;关于友情:482e53c11729bf35c99d434275943755&#34;&gt;关于友情&lt;/h2&gt;
+&lt;h2 id=&#34;关于友情&#34;&gt;关于友情&lt;/h2&gt;
 
 &lt;p&gt;年底一位好友结婚，虽然很近，因为身体还是没有去。很多时候，想和朋友做些事情，没精力。于是把早睡当使命，不想把朋友的照顾看作理所当然。一位好友说，出去旅行，事情变得越来越淡，人变得越来越近。我认识到错误想联系他们时，他们表示很忙。&lt;/p&gt;
 
-&lt;h2 id=&#34;关于家:482e53c11729bf35c99d434275943755&#34;&gt;关于家&lt;/h2&gt;
+&lt;h2 id=&#34;关于家&#34;&gt;关于家&lt;/h2&gt;
 
 &lt;p&gt;年底，老爸、大圣和我有一次正面冲突，也是第一次我们爷仨一起喝酒，一起相互照应。老爸的观念，让我觉得前面一片漆黑，顿时绝望。也让我发现对老爸老妈的关爱太少。爷爷那一辈是为了生存而活，老爸是为了面子和事理而活，大圣和我努力在为自己真实的活着，我们会尽孝，但更会忠于自己，这应该是我们的坚持。&lt;/p&gt;
 
 &lt;p&gt;喜欢过一群身边的人，他们总是散发着美好的品质，阳光，热心，开朗。让周围受益，感染着我。一次大圣和我给小外甥的红包写的祝福语都是祝：“健康快乐的成长”。我们太羡慕那些身心健康成长的孩子，甚至忘记了我们自己拥有的更珍贵的品质。&lt;/p&gt;
 
-&lt;h2 id=&#34;关于自己:482e53c11729bf35c99d434275943755&#34;&gt;关于自己&lt;/h2&gt;
+&lt;h2 id=&#34;关于自己&#34;&gt;关于自己&lt;/h2&gt;
 
 &lt;p&gt;有机会遇见另一个丑陋的自己，是幸运的。&lt;/p&gt;
 
