@@ -53,29 +53,29 @@
 
 &lt;p&gt;老婆是做猎头的，也算是比较优秀的猎头了，他能赢得优秀工程师的信任，包括很多个性奇特的工程师，并且能尽力维护候选人的利益。怀孕后，老婆公司找了些case以重大经济损失和严重违反公司规章制度为由开除了老婆，于是便开始了我们的劳动争议。其实遇到这种事情，就是倒大霉了，不管能不能赢得诉求,你都会损失，各种压力，时间，精力上的浪费，还有断了社保后的问题。&lt;/p&gt;
 
-&lt;h2 id=&#34;流程&#34;&gt;流程&lt;/h2&gt;
+&lt;h2 id=&#34;流程:71d6126b64392bed63537027d7597d6d&#34;&gt;流程&lt;/h2&gt;
 
 &lt;p&gt;犯了一个错误就是，劳动争议的开始仲裁员会让申诉人陈述诉求，这个时候一定要说完，我老婆在快结束时，才提其它几个诉求，显然驳回了。即便重要的诉求，只怪自己没有提前学习下流程，主要也就注意这点。&lt;/p&gt;
 
-&lt;h2 id=&#34;事实&#34;&gt;事实&lt;/h2&gt;
+&lt;h2 id=&#34;事实:71d6126b64392bed63537027d7597d6d&#34;&gt;事实&lt;/h2&gt;
 
 &lt;p&gt;法律讲的是事实，自然事实与法律事实。老婆总是想当然，以为太明显的事情，然要用事实说话。&lt;/p&gt;
 
-&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
+&lt;h2 id=&#34;准备:71d6126b64392bed63537027d7597d6d&#34;&gt;准备&lt;/h2&gt;
 
 &lt;p&gt;每个诉求，理由，证据都要准备好（公司有责任提供更多的证据），最好法律法规也都清楚，能找到个律师朋友相助当然是最好了。其实准备的过程中也是学习最多阶段。&lt;/p&gt;
 
-&lt;h2 id=&#34;公正&#34;&gt;公正&lt;/h2&gt;
+&lt;h2 id=&#34;公正:71d6126b64392bed63537027d7597d6d&#34;&gt;公正&lt;/h2&gt;
 
 &lt;p&gt;公正是难的，仲裁员是要理智的，即使面对台下各种耍小聪明，营私舞弊之人，也不能脱口大骂，要忍住然后千思万绪的理清，为受害人争取最大利益。&lt;/p&gt;
 
 &lt;p&gt;公正，真的有公正吗？这个社会你自然可以相信公正，毕竟大部分人在往幸福的路上，也渴望公正，但做到公正是难的，靠制度，靠执行，更要靠自己的能力去努力争取。&lt;/p&gt;
 
-&lt;h2 id=&#34;舆论&#34;&gt;舆论&lt;/h2&gt;
+&lt;h2 id=&#34;舆论:71d6126b64392bed63537027d7597d6d&#34;&gt;舆论&lt;/h2&gt;
 
 &lt;p&gt;很多时候，如果法律都解决不了的事情，我们会诉诸于舆论。事发后，有个猎头圈比较有影响的人要为老婆声援，还好被老婆拒绝了，还有一些腾讯等工程师然而我们最终没有采用舆论方式，害怕它的毁灭性会太大，老婆公司毕竟是一家小公司。如若是BAT这样的公司，做这种不光彩的事情，我想我们应该舆论，然而舆论并不能伤害到他们什么&lt;/p&gt;
 
-&lt;h2 id=&#34;幸运&#34;&gt;幸运&lt;/h2&gt;
+&lt;h2 id=&#34;幸运:71d6126b64392bed63537027d7597d6d&#34;&gt;幸运&lt;/h2&gt;
 
 &lt;p&gt;前段时间，我们阴差阳错的没有买到房子真是幸运，否则老婆失业，我们家已然要破产了。&lt;/p&gt;
 
@@ -97,7 +97,7 @@
 
 &lt;h2 id=&#34;10000公里俯瞰build&#34;&gt;10000公里俯瞰Build&lt;/h2&gt;
 
-&lt;p&gt;Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。而Build平台可以最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发)吧，只有他们有责任和欲望演进构建的脚步，我们应致力于Build平台体验和好的构建根据的引入与研发。&lt;/p&gt;
+&lt;p&gt;Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。而Build平台可以最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发者)吧，只有他们有责任和欲望演进构建的脚本代码，我们应致力于Build平台体验和构建工具的引入与研发。&lt;/p&gt;
 
 &lt;p&gt;现代Build系统,构建分享的舞台，中转站，生产与消费，依赖关系图，有向无环Task图。&lt;/p&gt;
 
@@ -316,7 +316,7 @@
 
 &lt;p&gt;移动UI自动化，看起来美好，践行起来却难。做个目光短见的实主义者。Page Objects Pattern是Selenium官方推崇的方式，最近研究写测试用例最佳实践之Page Objects，同时结合Appium的Java Client简单介绍下如何写出靠谱的Page Object。&lt;/p&gt;
 
-&lt;h2 id=&#34;page-objects:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Page Objects&lt;/h2&gt;
+&lt;h2 id=&#34;page-objects&#34;&gt;Page Objects&lt;/h2&gt;
 
 &lt;p&gt;Page Object定义为抽象web app页面的一系列对象，通过对UI界面的抽象，它拥有很多好处：&lt;/p&gt;
 
@@ -327,7 +327,7 @@
 &lt;li&gt;UI元素的定位和具体实现分离，如Android，iOS的一套脚本实现&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;一个简单的例子:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;一个简单的例子&lt;/h2&gt;
+&lt;h2 id=&#34;一个简单的例子&#34;&gt;一个简单的例子&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class BaiduSearchPage {
 
@@ -353,7 +353,7 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;推荐的做法:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;推荐的做法&lt;/h2&gt;
+&lt;h2 id=&#34;推荐的做法&#34;&gt;推荐的做法&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;public方法暴露Page对象的服务&lt;/li&gt;
@@ -364,11 +364,11 @@
 &lt;li&gt;不同的结果，同一个操作可以用不同的方法。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;appium-中使用page-object-pattern:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Appium 中使用Page Object Pattern&lt;/h2&gt;
+&lt;h2 id=&#34;appium-中使用page-object-pattern&#34;&gt;Appium 中使用Page Object Pattern&lt;/h2&gt;
 
 &lt;p&gt;Appium的Java Client是基于WebDriver的，但有了一些改进。比如元素定位不到时，它会将Locator详细信息抛出，而Selenium没有。&lt;/p&gt;
 
-&lt;h2 id=&#34;wait:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;Wait&lt;/h2&gt;
+&lt;h2 id=&#34;wait&#34;&gt;Wait&lt;/h2&gt;
 
 &lt;p&gt;移动自动化测试Wait是很关键的一个动作，既关乎正确性，也关乎效率，我们应该极力避免使用Thread.sleep()或Sleeper.sleepTight()。Appium的客户端提供了一个类AppiumFieldDecorator可以很方便的设置ImplicitlyWaitTimeOut。FieldDecorator顾名思义，是Page对象Field的Decorator，PageObject的精髓就是在Feild上下功夫，将WebElement类型的Feild动态Proxy为一个增强的WebElement,这个成员在每次操作时，都会先使用注解的定位策略定位，然后再调用WebElement的方法，当然可以通过CacheLookup注解，来缓存定位结果。&lt;/p&gt;
 
@@ -389,7 +389,7 @@
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;findby:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;FindBy&lt;/h2&gt;
+&lt;h2 id=&#34;findby&#34;&gt;FindBy&lt;/h2&gt;
 
 &lt;p&gt;在Appium中你会遇到，Selendroid模式和UIAutomator定位差异，比如Selendroid的linkText在UIAutomator中用name,还有就是iOS脚本想和Android共用一份。这在Appium中有了很好的扩充，Appium客户端会在运行时决定使用哪个Annotation来装饰WebElement。&lt;/p&gt;
 
@@ -399,11 +399,11 @@
 private WebElement textSelendroid;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;elementinterceptor:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;ElementInterceptor&lt;/h2&gt;
+&lt;h2 id=&#34;elementinterceptor&#34;&gt;ElementInterceptor&lt;/h2&gt;
 
 &lt;p&gt;总是有这样或那样的原因，需要记录日志，如果方法的执行每一步都要手写是很痛苦的，自然我们想到了AOP。在Selenium中EventFiringWebDriver类可以方便的记录日志，但是在Appium客户端中，我们可以修改AppiumFieldDecorator中ElementInterceptor来加入自己的日志信息，不过暂时这个功能Appium Client没有暴露出来，需要自己fork个repo修改下。&lt;/p&gt;
 
-&lt;h2 id=&#34;参考:7dbf58256fe9adba2caee2327d472e2f&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://assertselenium.com/automation-design-practices/page-object-pattern/&#34;&gt;http://assertselenium.com/automation-design-practices/page-object-pattern/&lt;/a&gt;
 &lt;a href=&#34;https://code.google.com/p/selenium/wiki/LoadableComponent&#34;&gt;https://code.google.com/p/selenium/wiki/LoadableComponent&lt;/a&gt;
