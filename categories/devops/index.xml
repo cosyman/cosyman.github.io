@@ -8,8 +8,46 @@
     <language>zh-cn</language>
     <managingEditor>cosyman@outlook.com (兰天)</managingEditor>
     <webMaster>cosyman@outlook.com (兰天)</webMaster>
-    <lastBuildDate>Sat, 09 May 2015 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Dec 2015 23:09:02 +0800</lastBuildDate>
     <atom:link href="http://cosyman.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>15年在Ctrip技术上的一点收获</title>
+      <link>http://cosyman.github.io/blog/2015/12/15%E5%B9%B4%E5%9C%A8ctrip%E6%8A%80%E6%9C%AF%E4%B8%8A%E7%9A%84%E4%B8%80%E7%82%B9%E6%94%B6%E8%8E%B7/</link>
+      <pubDate>Fri, 11 Dec 2015 23:09:02 +0800</pubDate>
+      <author>cosyman@outlook.com (兰天)</author>
+      <guid>http://cosyman.github.io/blog/2015/12/15%E5%B9%B4%E5%9C%A8ctrip%E6%8A%80%E6%9C%AF%E4%B8%8A%E7%9A%84%E4%B8%80%E7%82%B9%E6%94%B6%E8%8E%B7/</guid>
+      <description>
+
+&lt;h2 id=&#34;自动化测试&#34;&gt;自动化测试&lt;/h2&gt;
+
+&lt;p&gt;上半年参与Ctrip移动UI自动化框架的开发，原始代码是从ebay借鉴的，对于Ctrip太过复杂，我删减掉很多。这也是首次工作之中开发框架，感觉还是很好的，只是之前的工作一直注重敏捷，唯快不破，而做框架是很难快起来的，要熟悉用户的习惯，相应领域知识，并熟知相关技术，还要能预测短时间内的变化。那段时间内通读了TestNG，HttpCore，Selenium，Appium，ddmlib等源码及Http权威指南/RFC文档，JSONWP等协议，也看了些Android系统相关的书籍，试图去了解所做的领域，总的来说是幸福的。&lt;/p&gt;
+
+&lt;h3 id=&#34;testng&#34;&gt;TestNG&lt;/h3&gt;
+
+&lt;p&gt;TestNG,通常基于它做扩展而已，主要通过实现TestNG的Listener来完成Case调度的管理及运行结果报表的定制。TestNG的核心在于实现一个正确并高效的Case调度执行器，我们的扩展代码将被Hook到TestNG的这个Task Graph中。&lt;/p&gt;
+
+&lt;h3 id=&#34;api自动化&#34;&gt;API自动化&lt;/h3&gt;
+
+&lt;p&gt;API,Http权威指南，RFC文档&lt;/p&gt;
+
+&lt;h3 id=&#34;ui自动化&#34;&gt;UI自动化&lt;/h3&gt;
+
+&lt;p&gt;UI测试除了快速按步骤写脚本，Page Object Pattern是其精髓，虽然模式通常让工程师变得刻板懒惰，但的确可以更简单快速的解决问题。Page Object本身就是对UI世界很好的抽象，而UI元素被抽象为Page Object的属性，通过Annotation/Attribuite，动态生成这些UI元素的Locator代理。抽象意味着与特定实物分离，自然就可以一套代码，相近业务达到跨平台，脚本的维护也更遵循人的思维方式&lt;/p&gt;
+
+&lt;h2 id=&#34;构建&#34;&gt;构建&lt;/h2&gt;
+
+&lt;p&gt;5月份左右，部门人员动荡太大，被派到Build组做支持，确切的讲，一个组走光了，我去做TS，压力相当的大，前3个月，人真是有点废了的感觉，也没用太多的学习了，后来慢慢好点的时候，也只好看Build相关的知识了。&lt;/p&gt;
+
+&lt;p&gt;在构建领域无一平台或语种可以像Java那样完整（不服来辩）。从灵活强大的Ant工具到约定胜于配置的标准化构建生命周期Maven，再到极具表达力（DSL）幸福构建的Gradle,足足进化了15年。当然另外一个更为庞大的Node平台火速发展也不过近3~5年。&lt;/p&gt;
+
+&lt;p&gt;优秀的工程师总是少的，就如同构建的价值难以被重视，构建工具在为开源的便捷化也作出了巨大贡献，提供了生产与消费组件的平台。构建通常需要解决依赖关系，计算输出，重要的是一个正确高效的TaskGraph执行引擎。&lt;/p&gt;
+
+&lt;h2 id=&#34;rock-the-world&#34;&gt;Rock the World&lt;/h2&gt;
+
+&lt;p&gt;去eBay的测试meeting时，看到茌成的PPT上Performance is a Faith点亮了我，很多时候我会怀疑努力写好代码的价值，满足需求的情况下，把代码写好，并不需要解释。也正是这种信仰坚持去关注用户的根本需求，提高用户体验，抓住技术的本质，才能真正的Rock the World！&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Build系统介绍</title>
@@ -23,7 +61,7 @@
 &lt;p&gt;好的IDE做Build工具的Wrapper，Build平台也应只做Build工具的Wrapper，大量散乱的Build脚本应被组织起来，演变为Build工具&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;10000公里俯瞰build&#34;&gt;10000公里俯瞰Build&lt;/h2&gt;
+&lt;h2 id=&#34;10000公里俯瞰build:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;10000公里俯瞰Build&lt;/h2&gt;
 
 &lt;p&gt;Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。而Build平台可以最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发者)吧，只有他们有责任和欲望演进构建的脚本代码，我们应致力于Build平台体验和构建工具的引入与研发。&lt;/p&gt;
 
@@ -31,22 +69,22 @@
 
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/cosyman/cosyman-hugo/master/static/images/devops/deg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;scm&#34;&gt;SCM&lt;/h2&gt;
+&lt;h2 id=&#34;scm:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;SCM&lt;/h2&gt;
 
-&lt;h2 id=&#34;configuration-manager-system&#34;&gt;Configuration Manager System&lt;/h2&gt;
+&lt;h2 id=&#34;configuration-manager-system:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Configuration Manager System&lt;/h2&gt;
 
 &lt;p&gt;虽然仅仅是flavor，可用抽象为独立的服务，并且最好抽象为独立的服务&lt;/p&gt;
 
-&lt;h2 id=&#34;profile&#34;&gt;Profile&lt;/h2&gt;
+&lt;h2 id=&#34;profile:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Profile&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;平台的独立性&lt;/li&gt;
 &lt;li&gt;不同的调料,当发现api传递很多参赛时，应该考虑这些参数是否需要暴露，是否是开放决定的，然后分组，暴露profile&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;script-dsl&#34;&gt;Script/DSL&lt;/h2&gt;
+&lt;h2 id=&#34;script-dsl:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Script/DSL&lt;/h2&gt;
 
-&lt;h2 id=&#34;repository&#34;&gt;Repository&lt;/h2&gt;
+&lt;h2 id=&#34;repository:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Repository&lt;/h2&gt;
 
 &lt;p&gt;提供了消费者提供者的舞台，内部繁荣。利于模块化的实践，在facebook专门开发工具，鼓励代码小模块的实践，加速构建速度。&lt;/p&gt;
 
@@ -56,27 +94,27 @@
 
 &lt;p&gt;本地缓存，局域网代理，缓存，高可用。&lt;/p&gt;
 
-&lt;h2 id=&#34;artifact&#34;&gt;Artifact&lt;/h2&gt;
+&lt;h2 id=&#34;artifact:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Artifact&lt;/h2&gt;
 
-&lt;h3 id=&#34;version&#34;&gt;Version&lt;/h3&gt;
+&lt;h3 id=&#34;version:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Version&lt;/h3&gt;
 
 &lt;p&gt;具体参考sem。通常为了开发方便，可以设置一种time changing 版本，每次构建都会获取最新的版本，显然它应该限制在生产环境，在maven中体现为Snapshot机制&lt;/p&gt;
 
 &lt;p&gt;版本应该直接体现在构建的文件名字当中，避免不必要的错误。&lt;/p&gt;
 
-&lt;h3 id=&#34;依赖&#34;&gt;依赖&lt;/h3&gt;
+&lt;h3 id=&#34;依赖:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;依赖&lt;/h3&gt;
 
 &lt;p&gt;大型的互联网的系统，依赖图也将非常复杂，它至少支持，依赖传递与中断或排除，以及版本冲突的选择策略定制。当然比如在Java中，可以通过ClassLoader的定义，避免版本冲突，尤其在Java9中有了更好的支持&lt;/p&gt;
 
-&lt;h2 id=&#34;lifecycle&#34;&gt;Lifecycle&lt;/h2&gt;
+&lt;h2 id=&#34;lifecycle:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Lifecycle&lt;/h2&gt;
 
 &lt;p&gt;生命周期的定义，意味着某种构建的抽象可能性，尤其对于DotNet，Java等平台，甚至每种构建都本身是一种标准，比如Java中war，ear等，它可以帮助吧约定胜于配置的理念发挥到极致，同时Lifecycle也通常意味着不变，对于灵活性&lt;/p&gt;
 
-&lt;h2 id=&#34;task-graph-goal&#34;&gt;Task Graph/Goal&lt;/h2&gt;
+&lt;h2 id=&#34;task-graph-goal:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Task Graph/Goal&lt;/h2&gt;
 
 &lt;p&gt;同样对于Task也应是一种有向无环图，这在Gradle Gulp等工具中显得特别重要&lt;/p&gt;
 
-&lt;h2 id=&#34;best-practices&#34;&gt;Best Practices&lt;/h2&gt;
+&lt;h2 id=&#34;best-practices:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Best Practices&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Build Script 由开发维护，作为代码的一部分&lt;/li&gt;
@@ -85,21 +123,21 @@
 &lt;li&gt;根本上关注构建体验，分而治之。&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;cbuilder-s-anti-pattern&#34;&gt;Cbuilder&amp;rsquo;s Anti Pattern&lt;/h2&gt;
+&lt;h2 id=&#34;cbuilder-s-anti-pattern:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Cbuilder&amp;rsquo;s Anti Pattern&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;SCM项目源码依赖&amp;ndash;&amp;gt;SCM目录依赖&amp;ndash;&amp;gt;SCM文件依赖 中间仓库，源码以来意味着依赖的交付为源码，JDK的开发中比如jshell，http2&lt;/li&gt;
 &lt;li&gt;BuildScript过重，没有转给开发，Build Engineer的出现&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;develop-build-tool&#34;&gt;Develop Build Tool&lt;/h2&gt;
+&lt;h2 id=&#34;develop-build-tool:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;Develop Build Tool&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Build 是严肃的，稳定&lt;/li&gt;
 &lt;li&gt;Build 应该被合理的组织&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references:f8b22a66f8740c2a1b65465f94ea1cec&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&#34;&gt;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&lt;/a&gt;&lt;/li&gt;
