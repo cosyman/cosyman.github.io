@@ -8,22 +8,8 @@
     <language>zh-cn</language>
     <managingEditor>cosyman@outlook.com (兰天)</managingEditor>
     <webMaster>cosyman@outlook.com (兰天)</webMaster>
-    <lastBuildDate>Mon, 05 Dec 2016 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Dec 2015 23:09:02 +0800</lastBuildDate>
     <atom:link href="http://cosyman.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>前端参考</title>
-      <link>http://cosyman.github.io/blog/2016/12/%E5%89%8D%E7%AB%AF%E5%8F%82%E8%80%83/</link>
-      <pubDate>Mon, 05 Dec 2016 00:00:00 +0800</pubDate>
-      <author>cosyman@outlook.com (兰天)</author>
-      <guid>http://cosyman.github.io/blog/2016/12/%E5%89%8D%E7%AB%AF%E5%8F%82%E8%80%83/</guid>
-      <description>
-
-&lt;h3 id=&#34;event&#34;&gt;Event&lt;/h3&gt;
-
-&lt;p&gt;事件的冒泡与捕获 &lt;a href=&#34;https://javascript.info/tutorial/bubbling-and-capturing&#34;&gt;https://javascript.info/tutorial/bubbling-and-capturing&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>15年在Ctrip技术上的一点收获</title>
@@ -386,12 +372,11 @@
 &lt;li&gt;减少重复代码&lt;/li&gt;
 &lt;li&gt;提高测试代码的可读性和稳定性&lt;/li&gt;
 &lt;li&gt;测试代码易于维护&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;UI元素的定位和具体实现分离，如Android，iOS的一套脚本实现
-&lt;/p&gt;
-
-&lt;h2 id=&#34;一个简单的例子&#34;&gt;一个简单的例子&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;UI元素的定位和具体实现分离，如Android，iOS的一套脚本实现
+&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;一个简单的例子&#34;&gt;一个简单的例子&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class BaiduSearchPage {
 

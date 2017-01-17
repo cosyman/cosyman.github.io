@@ -186,12 +186,11 @@
 &lt;li&gt;减少重复代码&lt;/li&gt;
 &lt;li&gt;提高测试代码的可读性和稳定性&lt;/li&gt;
 &lt;li&gt;测试代码易于维护&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;UI元素的定位和具体实现分离，如Android，iOS的一套脚本实现
-&lt;/p&gt;
-
-&lt;h2 id=&#34;一个简单的例子&#34;&gt;一个简单的例子&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;UI元素的定位和具体实现分离，如Android，iOS的一套脚本实现
+&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;一个简单的例子&#34;&gt;一个简单的例子&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class BaiduSearchPage {
 
