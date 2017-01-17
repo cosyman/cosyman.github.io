@@ -62,7 +62,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cosyman.github.io/touch-icon-144-precomposed.png">
 <link href="http://cosyman.github.io/favicon.png" rel="icon">
 
-<meta name="generator" content="Hugo 0.15" />
+<meta name="generator" content="Hugo 0.18.1" />
 
   <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -75,6 +75,18 @@
 <link rel="stylesheet" href="http://cosyman.github.io/css/highlight/default.css">
 
   
+  
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-64429204-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
 </head>
 <body>
   <main id="main-wrapper" class="container main_wrapper has-sidebar">
@@ -143,6 +155,12 @@
 
 
 
+
+
+
+
+
+
 </div>
 
 
@@ -172,25 +190,25 @@
 </header>
 
   <div class="container content">
-  
+  <h2 id="自动化测试">自动化测试</h2>
 
-<h2 id="自动化测试:359f8a05dbc5432e61f7657c9d6321e0">自动化测试</h2>
+<p>上半年参与Ctrip移动UI自动化框架的开发，原始代码是从ebay借鉴的，对于Ctrip太过复杂，我删减掉很多。这也是首次工作之中开发框架，感觉还是很好的，只是之前的工作一直注重敏捷，唯快不破，而做框架是很难快起来的，要熟悉用户的习惯，相应领域知识，并熟知相关技术，还要能预测短时间内的变化。那段时间内通读了TestNG、HttpCore、FreeMarker、Selenium、Appium、ddmlib等源码及Http权威指南/RFC文档，JSONWP等协议，也看了些Android系统相关的书籍，试图去了解所做的领域，总的来说是幸福的。阅读源码也更快了，多看，多试。</p>
 
-<p>上半年参与Ctrip移动UI自动化框架的开发，原始代码是从ebay借鉴的，对于Ctrip太过复杂，我删减掉很多。这也是首次工作之中开发框架，感觉还是很好的，只是之前的工作一直注重敏捷，唯快不破，而做框架是很难快起来的，要熟悉用户的习惯，相应领域知识，并熟知相关技术，还要能预测短时间内的变化。那段时间内通读了TestNG，HttpCore，Selenium，Appium，ddmlib等源码及Http权威指南/RFC文档，JSONWP等协议，也看了些Android系统相关的书籍，试图去了解所做的领域，总的来说是幸福的。</p>
+<p></p>
 
-<h3 id="testng:359f8a05dbc5432e61f7657c9d6321e0">TestNG</h3>
+<h3 id="testng">TestNG</h3>
 
 <p>TestNG,通常基于它做扩展而已，主要通过实现TestNG的Listener来完成Case调度的管理及运行结果报表的定制。TestNG的核心在于实现一个正确并高效的Case调度执行器，我们的扩展代码将被Hook到TestNG的这个Task Graph中。</p>
 
-<h3 id="api自动化:359f8a05dbc5432e61f7657c9d6321e0">API自动化</h3>
+<h3 id="api自动化">API自动化</h3>
 
 <p>API,Http权威指南，RFC文档</p>
 
-<h3 id="ui自动化:359f8a05dbc5432e61f7657c9d6321e0">UI自动化</h3>
+<h3 id="ui自动化">UI自动化</h3>
 
 <p>UI测试除了快速按步骤写脚本，Page Object Pattern是其精髓，虽然模式通常让工程师变得刻板懒惰，但的确可以更简单快速的解决问题。Page Object本身就是对UI世界很好的抽象，而UI元素被抽象为Page Object的属性，通过Annotation/Attribuite，动态生成这些UI元素的Locator代理。抽象意味着与特定实物分离，自然就可以一套代码，相近业务达到跨平台，脚本的维护也更遵循人的思维方式</p>
 
-<h2 id="构建:359f8a05dbc5432e61f7657c9d6321e0">构建</h2>
+<h2 id="构建">构建</h2>
 
 <p>5月份左右，部门人员动荡太大，被派到Build组做支持，确切的讲，一个组走光了，我去做TS，压力相当的大，前3个月，人真是有点废了的感觉，也没有太多的学习了，后来慢慢好点的时候，也只好看Build相关的知识了。</p>
 
@@ -198,10 +216,9 @@
 
 <p>优秀的工程师总是少的，就如同构建的价值难以被重视，构建工具在为开源的便捷化也作出了巨大贡献，提供了生产与消费组件的平台。构建通常需要解决依赖关系，计算输出，重要的是一个正确高效的TaskGraph执行引擎。</p>
 
-<h2 id="rock-the-world:359f8a05dbc5432e61f7657c9d6321e0">Rock the World</h2>
+<h2 id="rock-the-world">Rock the World</h2>
 
 <p>去eBay的测试meeting时，看到茌成的PPT上Performance is a Faith点亮了我，很多时候我会怀疑努力写好代码的价值，满足需求的情况下，把代码写好，并不需要解释。也正是这种信仰坚持去关注用户的根本需求，提高用户体验，抓住技术的本质，才能真正的Rock the World！</p>
-
 </div>
 
 
@@ -217,6 +234,10 @@
     </a>
     
 
+    
+    <a class="next" href="http://cosyman.github.io/blog/2016/12/%E5%89%8D%E7%AB%AF%E5%8F%82%E8%80%83/" title="前端参考">
+      Next
+    </a>
     
 
   
@@ -291,19 +312,6 @@
 
 <script src="http://cosyman.github.io/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64429204-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 
     

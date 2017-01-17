@@ -2,9 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://cosyman.github.io/</loc>
-    <lastmod>2015-12-11T23:09:02+08:00</lastmod>
-    <priority>0</priority>
+    <loc>http://cosyman.github.io/blog/2016/12/%E5%89%8D%E7%AB%AF%E5%8F%82%E8%80%83/</loc>
+    <lastmod>2016-12-05T00:00:00+08:00</lastmod>
   </url>
   
   <url>
@@ -65,6 +64,55 @@
   <url>
     <loc>http://cosyman.github.io/blog/2010/07/%E6%88%91%E7%9A%842010%E8%AF%AF%E5%85%A5%E4%BC%A0%E9%94%80/</loc>
     <lastmod>2010-07-03T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/blog/1/01/</loc>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/resume/</loc>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/categories/devops/</loc>
+    <lastmod>2015-12-11T23:09:02+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/post/</loc>
+    <lastmod>2016-12-05T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/</loc>
+    <lastmod>2016-12-05T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2016-12-05T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/categories/%E5%B9%B4%E5%BA%A6%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2015-02-13T23:12:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cosyman.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2015-08-28T17:39:57+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
