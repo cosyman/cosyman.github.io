@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Build系统介绍  &middot; 兰天</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="尝试去描述现有Build系统架构，更好的去构建Ctrip Build平台，追求软件开发，交付的一致性体验，避免做Build工程师" />
+
+<meta name="keywords" content="Build, CMS, Gulp, Maven, Gradle, CD, ">
+
+
+<meta property="og:title" content="Build系统介绍  &middot; 兰天 ">
+<meta property="og:site_name" content="兰天"/>
+<meta property="og:url" content="http://cosyman.github.io/blog/2015/05/build%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/" />
+<meta property="og:locale" content="zh-cn">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="尝试去描述现有Build系统架构，更好的去构建Ctrip Build平台，追求软件开发，交付的一致性体验，避免做Build工程师"/>
+<meta property="og:article:published_time" content="2015-05-09T00:00:00&#43;08:00" />
+<meta property="og:article:modified_time" content="2015-05-09T00:00:00&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="Build">
+    
+<meta property="og:article:tag" content="CMS">
+    
+<meta property="og:article:tag" content="Gulp">
+    
+<meta property="og:article:tag" content="Maven">
+    
+<meta property="og:article:tag" content="Gradle">
+    
+<meta property="og:article:tag" content="CD">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@bluesky_yao" />
+<meta name="twitter:creator" content="@bluesky_yao" />
+<meta name="twitter:title" content="Build系统介绍" />
+<meta name="twitter:description" content="尝试去描述现有Build系统架构，更好的去构建Ctrip Build平台，追求软件开发，交付的一致性体验，避免做Build工程师" />
+<meta name="twitter:url" content="http://cosyman.github.io/blog/2015/05/build%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/" />
+<meta name="twitter:domain" content="http://cosyman.github.io/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Build系统介绍",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2015-05-09",
+    "description": "尝试去描述现有Build系统架构，更好的去构建Ctrip Build平台，追求软件开发，交付的一致性体验，避免做Build工程师",
+    "wordCount":  82 
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://cosyman.github.io/blog/2015/05/build%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cosyman.github.io/touch-icon-144-precomposed.png">
+<link href="http://cosyman.github.io/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.18.1" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://cosyman.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://cosyman.github.io/css/style.css">
+<link rel="stylesheet" href="http://cosyman.github.io/css/highlight/default.css">
+
+  
+  
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-64429204-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="http://cosyman.github.io/">
+  兰天
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+<a class="homelink" href="http://cosyman.github.io/">Home</a>
+
+
+  
+<a href="http://cosyman.github.io/about">About</a>
+
+<a href="http://cosyman.github.io/categories" title="Show list of topics">Categories</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+<a id="contact-link-email" class="contact_link" href="mailto:cosyman@outlook.com">
+  <span class="fa fa-envelope-square"></span><span>email</span></a>
+
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/cosyman">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+<a id="contact-link-linkedin" class="contact_link" href="https://www.linkedin.com/in/blueskyyao">
+  <span class="fa fa-linkedin-square"></span><span>linkedin</span></a>
+
+
+
+
+
+
+
+<a id="contact-link-twitter" class="contact_link" href="https://twitter.com/bluesky_yao">
+  <span class="fa fa-twitter-square"></span><span>twitter</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Build系统介绍
+</h1>
+
+  <div class="metas">
+<time datetime="2015-05-09">9 May, 2015</time>
+
+
+  
+  &middot; Read in about 1 min
+  &middot; (82 Words)
+  <br>
+  
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<blockquote>
+<p>好的IDE做Build工具的Wrapper，Build平台也应只做Build工具的Wrapper，大量散乱的Build脚本应被组织起来，演变为Build工具</p>
+</blockquote>
+
+<h2 id="10000公里俯瞰build">10000公里俯瞰Build</h2>
+
+<p>Build体系中包括Build平台，Build工具，Build脚本。大量散乱的Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。Build平台应该最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发者)吧，只有他们有责任和欲望演进构建脚本代码，我们应致力于Build平台体验和构建工具的引入与研发。</p>
+
+<p>当代Build平台,它应该能提供规范统一，集中的构建分享舞台，加快构建的生产与消费。</p>
+
+<p>Build工具本质上，是对文件的处理，加工，构建出目标容器可以运行的软件。构建的过程就是输入，输出，处理的有向无环图。Build工具的优化，就是对这个有向无环图的优化，单个节点处理，多个节点输入输出的缓存/增量处理，图流向的优化，并行处理等。</p>
+
+<p>Build脚本，自然就是对输入，输出，处理的描述，从一开始用文本，xml，再到DSL，到代码，是工程师对Build脚本认知的成熟体现。</p>
+
+<p><img src="https://raw.githubusercontent.com/cosyman/cosyman-hugo/master/static/images/devops/deg.png" alt="" /></p>
+
+<h2 id="scm">SCM</h2>
+
+<p>Build的原材料来自VCS，但它依赖的中间产物，产生的中间产物，不应该被上传至VCS。Build脚本应视作代码。</p>
+
+<h2 id="configuration-manager-system">Configuration Manager System</h2>
+
+<p>虽然仅仅是flavor，可以抽象为独立的服务，并且最好抽象为独立的服务</p>
+
+<h2 id="profile">Profile</h2>
+
+<ol>
+<li>平台的独立性</li>
+<li>不同的调料,当发现api传递很多参数时，应该考虑这些参数是否需要暴露，然后分组，只暴露profile。</li>
+</ol>
+
+<h2 id="script-dsl">Script/DSL</h2>
+
+<p>DSL是通用语言发展到一定阶段的必然产物，Build DSL的产生意味着Build工具的描述能力不再受限制</p>
+
+<h2 id="repository">Repository</h2>
+
+<p>提供了构建消费者和提供者的舞台，这也是一个平台繁荣的必要条件。它利于模块化的实践，在facebook专门开发工具，鼓励代码小模块的实践，加速构建速度。</p>
+
+<p>仓库管理的中心化，布局的标准化，让开发者专注于构建的使用和集成</p>
+
+<p>结合git的tag管理，充分利用scm和代码密切联系，可以减少二次存放</p>
+
+<p>本地缓存，局域网代理，缓存，高可用。</p>
+
+<p>生产构建的格式应该与行业标准可适配，否则就意味着自造车轮，至少是封闭的，不利于引入第三方构建，是与开源的对抗</p>
+
+<h2 id="artifact">Artifact</h2>
+
+<h3 id="version">Version</h3>
+
+<p>具体参考sem。</p>
+
+<p>通常在集成初期为了开发方便，可以设置一种Time Changing版本，每次构建都会获取最新的版本，显然它应该限制在生产环境，在maven中体现为Snapshot机制</p>
+
+<p>在集成趋于稳定时，可以用Dynamic Changing版本，并最终到Final版本</p>
+
+<p>版本应该直接体现在构建的文件名字当中，避免不必要的错误。</p>
+
+<h3 id="依赖">依赖</h3>
+
+<p>没有依赖的项目，通常是没什么用的，Martin Fowler如是说。</p>
+
+<p>大型的互联网系统，依赖图也将非常复杂，它至少支持，依赖传递与中断或排除，以及版本冲突的选择策略定制。</p>
+
+<h2 id="lifecycle">Lifecycle</h2>
+
+<p>生命周期的定义，意味着某种构建的抽象可能性，尤其对于DotNet，Java等平台，构建本身是一种标准，比如Java中war，ear等，它可以帮助把约定胜于配置的理念发挥到极致，同时Lifecycle也通常意味着不变，对于灵活性要求极高的构建，则需要更强大的DSL来帮忙。</p>
+
+<p>构建任务合理的组织，文件夹结构分类明确，自包含。</p>
+
+<h2 id="task-graph-goal">Task Graph/Goal</h2>
+
+<p>对于构建有向无环图的抽象，可以看成Gradle中的TaskGraph，在Maven中则对应为Lifecycle和Goal。</p>
+
+<p>Build系统引擎的优化，则是这TaskGraph的优化。调度系统如此，试框架TestNG也是如此。</p>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<ol>
+<li>Build Script 由开发维护，作为代码的一部分。</li>
+<li>一致性，本地，server端的构建行为要一致，可以方便验证。</li>
+<li>关注点分离，self-contained的完整的输入输出及处理周期。</li>
+<li>根本上关注构建体验，分而治之。</li>
+<li>引入构建仓库。</li>
+</ol>
+
+<h2 id="cbuilder-s-anti-pattern">Cbuilder&rsquo;s Anti Pattern</h2>
+
+<ol>
+<li>SCM项目源码依赖&ndash;&gt;SCM目录依赖&ndash;&gt;SCM文件依赖 中间仓库，源码依赖意味着依赖的交付为源码，JDK的开发中比如jshell，http2</li>
+<li>BuildScript过重，没有转给开发，Build Engineer的出现</li>
+</ol>
+
+<h2 id="develop-build-tool">Develop Build Tool</h2>
+
+<ol>
+<li>Build 是严肃的，稳定</li>
+<li>Build 应该被合理的组织</li>
+</ol>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_software_package_management_systems">https://en.wikipedia.org/wiki/List_of_software_package_management_systems</a></li>
+<li><a href="http://www.cs.virginia.edu/~dww4s/articles/build_systems.html">Overview of  Build</a></li>
+<li><a href="http://www.open-open.com/doc/view/4058453cde4b429c82ff2807d8aa81f0">淘宝Maven培训</a></li>
+<li><a href="http://devops.com/2014/07/29/continuous-delivery-pipeline/">http://devops.com/2014/07/29/continuous-delivery-pipeline/</a></li>
+<li><a href="http://semver.org">版本</a></li>
+<li><a href="http://www.infoq.com/presentations/cd-gradle-jenkins">http://www.infoq.com/presentations/cd-gradle-jenkins</a></li>
+<li><a href="http://blog.nuget.org/20150729/Introducing-nuget-uwp.html">NuGet Package Name</a></li>
+<li><a href="https://dzone.com/refcardz/designing-quality-software">Dependency Design</a></li>
+<li><a href="https://dzone.com/refcardz/getting-started-repository">Repository Management</a></li>
+</ul>
+
+</div>
+
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
+  
+  
+
+    
+    <a class="prev" href="http://cosyman.github.io/blog/2015/05/%E7%BA%AA%E5%BF%B5%E5%A5%BD%E5%8F%8B%E6%9C%B1%E5%85%A8/" title="纪念好友朱全">
+      Previous
+    </a>
+    
+
+    
+    <a class="next" href="http://cosyman.github.io/blog/2015/08/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8A%B3%E5%8A%A8%E4%BA%89%E8%AE%AE/" title="记一次劳动争议">
+      Next
+    </a>
+    
+
+  
+
+
+</div>
+
+  <div class="container comments">
+  <h2>Comments</h2>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//cosyman.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+
+</div>
+
+
+  
+
+</div>
+
+</footer>
+
+    </main>
+    
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//cosyman.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+<script src="http://cosyman.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+  </body>
+</html>
+
